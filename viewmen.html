@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8680ca36fa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    #navbar{
+        display: flex;
+    }
+    #navbar div:nth-child(1){
+        width: 74px;
+        height: 29px;
+        background-color: #f2f2f2;
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        margin-left: 170px;
+        cursor: pointer;
+    }
+    #navbar div:nth-child(2){
+        width: 50px;
+        height: 29px;
+        /* background-color: #f2f2f2; */
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        cursor: pointer;
+        margin-left: 9px;
+    }
+    #navbar div:nth-child(3){
+        width: 48px;
+        height: 29px;
+        /* background-color: #f2f2f2; */
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        cursor: pointer;
+        margin-left: 9px;
+    }
+    #navbar div:nth-child(4){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 545px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(5){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(6){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(8){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    .heartN{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .heartN:hover{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-love-like-favorite-46263.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .sizeN{
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-top: 21px;
+    }
+    #mytheresa{
+      height: 36.36px;
+      width: 293px;
+      margin-left: 615px;
+      margin-top: 50px;
+    }
+    #sbag{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;  
+       margin-top: -25px;
+       margin-left: 1200px;
+    }
+    #bagTxt{
+        position: relative;
+    }
+    #bag{
+        height: 36px;
+        width: 36px;
+        margin-top: -40px;
+        margin-left: 1317px;
+    }
+    .count{
+        position: absolute;
+        margin-left: -22px;
+        bottom: 5px;
+    }
+    #categories{
+        display: flex;
+        margin-top: 40px;
+    }
+    #newArri{
+        font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       color: gray;
+       margin-left: 170px;
+    }
+   .marginSize{
+       font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       color: gray;
+       margin-left: 20px;
+   }
+   #search{
+       border: 1px solid gainsboro;
+       margin-left: 195px;
+       width: 230px;
+       padding: 6px 10px 6px 10px;
+   }
+   #fullLine{
+        height: 1.2px;
+        width: 100%;
+        background-color: #ebebeb;
+        margin-top: 9px;
+        margin-bottom: 48px;
+   }
+
+#arrival{
+    display: none;
+    position: absolute;
+    width: 1180px;
+    margin-left: 170px;
+    /* border: 1px solid red; */
+    height: 445px;
+    margin-top: -49px;
+}
+#smokeStrip{
+    background-color: #f2f2f2;
+    height: 33px;
+    width: 100%;
+    padding-top: 15px;
+}
+#smokeStrip span:nth-child(1) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 25px;
+       
+}
+#smokeStrip span:nth-child(2) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 190px;
+}
+#inn{
+    display: flex;
+    background-color: white;
+    height: 396px;
+}
+#inn>div>ul{
+    list-style-type: none;
+}
+#inn div:nth-child(1) {
+    margin-left: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn div:nth-child(2) {
+    margin-left: 102px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+.space{
+    margin-top: 13px;
+}
+#whiwomen{
+    margin-left: 120px;
+}
+
+
+#designerC{
+    display: none;
+    position: absolute;
+    width: 1180px;
+    margin-left: 170px;
+    /* border: 1px solid red; */
+    height: 445px;
+    margin-top: -49px;
+}
+#smokeStrip1{
+    background-color: #f2f2f2;
+    height: 33px;
+    width: 100%;
+    padding-top: 15px;
+}
+#smokeStrip1 span:nth-child(1) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 25px;
+       
+}
+#smokeStrip1 span:nth-child(2) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 430px;
+}
+#inn1{
+    display: flex;
+    background-color: white;
+    height: 396px;
+}
+#inn1>div>ul{
+    list-style-type: none;
+}
+#inn1 div:nth-child(1) {
+    margin-left: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn1 div:nth-child(2) {
+    margin-left: 58px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn1 div:nth-child(3) {
+    margin-left: 102px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#sunglass{
+    margin-left: 120px;
+}
+
+
+
+
+
+
+
+    #wk{
+        display: flex;
+        margin-left: 700px;
+    }
+    #wk p:nth-child(1) {
+        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif, Futura, "Century Gothic", "Gill Sans", Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        line-height: 17px;
+        text-decoration: underline;
+    }
+    #wk p:nth-child(2) {
+        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif, Futura, "Century Gothic", "Gill Sans", Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        line-height: 17px;
+        text-decoration: underline;
+        margin-left: 40px;
+    }
+    #menSale{
+        display: flex;
+    }
+    #menSale p:nth-child(1){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        color: grey;
+        margin-left: 170px;
+    }
+    #select{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        font-weight: 400;
+        color: grey;
+        margin-left: 650px;
+        border: none;
+    }
+    /* #down{
+        height: 15px;
+        width: 15px;
+        margin-left: -3px;
+    } */
+    #line{
+        width: 77.1%;
+        height: 1.3px;
+        margin-left: 170px;
+        background-color: gainsboro;
+        margin-top: 5px;
+    }
+    #catPro{
+        display: flex;
+        margin-left: 170px;
+        /* border: 1px solid red; */
+        width: 77.1%;
+        height: 3380px;
+    }
+    #sortCat{
+        width: 255px;
+        /* border: 1px solid green; */
+        height: 1230px;
+        margin-left: 12px;
+       
+    }
+    #prod{
+        width: 800px;
+        margin-left: 30px;
+        /* border: 1px solid green; */
+        height: 700px;
+    }
+    #one>ul{
+        list-style-type: none;
+        margin-left: -37px;
+    }
+    #one>ul>li:nth-child(1) {
+        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+    }
+    #one>ul>li:nth-child(2) {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        color: grey;
+    }
+    #one>ul>li:nth-last-child(1) {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+        margin-bottom: 23px;
+    }
+    .s{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+        color: grey;
+    }
+    #line2{
+        width: 100%;
+        height: 1.3px;
+        background-color: gainsboro;
+    }
+    #desi{
+        display: flex;
+    }
+    #desi p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    #desi>div{
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 169px;
+    }
+    #inp{
+        padding: 9px;
+        width: 234px;
+        margin-top: -5px;
+        border: 1.5px solid gainsboro;
+    }
+    #design {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 15px;
+        color: grey; 
+    }
+    .desil{
+        margin-top: 8px;
+    }
+    #line3{
+        width: 100%;
+        height: 1.3px;
+        background-color: gainsboro;
+        margin-top: 20px;
+    }
+    #size{
+        display: flex;
+    }
+    #size p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    #size>div{
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 203px;
+    }
+    #dsizes{
+        margin-top: -20px;
+        /* border: 1px solid red;
+        width: 100%; */
+        height: 220px;
+        overflow:auto;
+    }
+    #line3{
+        width: 100%;
+        height: 1.3px;
+        background-color: gainsboro;
+    }
+    #sizeT {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 15px;
+        color: grey; 
+    }
+    #colors{
+        display: flex;
+    }
+    #colors p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    #colors>div{
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 176px;
+    }
+    #dcol{
+        margin-top: -2px;
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 220px;
+        overflow:auto;
+    }
+    #line4{
+        width: 100%;
+        height: 1.3px;
+        background-color: gainsboro;
+    }
+    #dcolors {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 15px;
+        color: grey; 
+    }
+    #pattern{
+        display: flex;
+    }
+    #pattern p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        margin-top: 10px;
+    }
+    #pattern>div{
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 180px;
+    }
+    #dpat{
+        margin-top: -2px;
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 136px;
+    }
+    #line5{
+        width: 100%;
+        height: 1.3px;
+        background-color: gainsboro;
+        margin-top: 15px;
+    }
+    #dpatterns {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-top: 15px;
+        color: grey; 
+    }
+    #container{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 460px 460px 460px;
+        grid-row-gap: 15px;
+        grid-column-gap: 11px;
+        margin-top: 20px;
+        width: 800px;
+        height: 410px;
+        /* border: 1px solid black; */
+    }
+    /* #item{
+        border: 1px solid red;
+    } */
+     #name{
+         font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 20px;
+         letter-spacing: 0.4px;
+         text-align: center;
+         margin-top: 6px;
+     }
+     #title{
+        font-family:Arial, Helvetica, sans-serif;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 20px;
+         text-align: center;
+         letter-spacing: 0.8px;
+         color: gray;
+         margin-top: -9px;
+     }
+     #price{
+         color: red;
+         text-align: center;
+         font-family:Arial, Helvetica, sans-serif;
+         font-size: 14px;
+         font-weight: 700;
+         letter-spacing: 0.3px;
+         margin-top: -9px;
+     }
+    .hsizeN{
+        /* border: 1px solid red; */
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+        margin-left: 230px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+.insLine{
+    height: 1.8px;
+        width: 78%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 70px;
+}
+#aboutInfo{
+    width: 67%;
+    margin-left: 280px;
+    /* border: 1px solid red; */
+}
+#title{
+    text-align: center;
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    margin-top: 30px;
+}
+#txt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-top: -4px;
+}
+#luxury{
+    display: inline-block;
+    width: 49%;
+    height: 130px;
+    /* border: 1px solid yellow; */
+}
+#luxury p{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    margin-top: 14px;
+}
+#luxury ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-left: -25px;
+}
+#service{
+    display: inline-block;
+    width: 49%;
+    height: 130px;
+    margin-left: 1%;
+    /* border: 1px solid yellow; */
+}
+#service p{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    margin-top: 14px;
+}
+#service ul{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-left: -25px;
+}
+.lastInf1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-top: 30px; 
+}
+.lastInf2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-top: 10px; 
+}
+.lastInf3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    margin-top: 10px; 
+}
+
+    .line1{
+        height: 1.2px;
+        width: 77.3%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 27px;
+    }
+    #shop{
+        text-align: center;
+        font-family:Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
+    .app-badges{
+        margin-left: 640px;
+        margin-top: 20px;
+    }
+    .line2{
+        height: 1.2px;
+        width: 77.3%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 20px;
+    }
+    #info{
+        display: flex;
+        width: 77.3%;
+        margin-left: 160px;
+        /* border: 1px solid red; */
+    }
+    #none1{
+        list-style-type: none;
+    }
+    #none2{
+        list-style-type: none;
+    }
+    #none3{
+        list-style-type: none;
+    }
+    #none1{
+        font-family:Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+    }
+    #none1 li:nth-child(1) {
+        cursor: pointer;
+    }
+    .li12{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    #li13{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: 4px;
+        margin-left: 19px;
+    }
+    #li14{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+    }
+    #li15{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: 4px;
+        margin-left: 19px;
+    }
+    #li16{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+    }
+    #li17{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        margin-left: 19px;
+    }
+    #li18{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: 5px;
+        margin-left: 19px;
+    }
+    #li19{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-left: 19px;
+    }
+    #none2{
+        font-family:Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+    }
+    #none3{
+        font-family:Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+    }
+    .siCo{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: 8px;
+    }
+    .mt{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: 20px;
+    }
+
+    #one{
+        margin-left: -40px;
+    }
+    #two{
+        margin-left: 38px;
+        cursor: pointer;
+    }
+    #three{
+        margin-left: 57px;
+        cursor: pointer;
+    }
+   
+    .heart{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .heart:hover{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-love-like-favorite-46263.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .size{
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+        margin-left: 7px;
+        margin-top: 20px;
+    }
+    #wishHeart{
+        display: flex;
+    }
+    #socialM{
+        display: flex;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+    .ml{
+        margin-left: 10px;
+    }
+    .mlc{
+        margin-left: 4px;
+    }
+    #iPhone{
+        margin-left: 1.5px;
+        margin-top: -15px;
+    }
+    #get{
+        font-family:Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+    }
+    #receive{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        color: gray;
+        margin-top: -5px;
+        cursor: pointer;
+    }
+    #wishHeart p{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        margin-top: 19px;
+        cursor: pointer;
+    }
+    #follow{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight:400;
+        letter-spacing: 0.8px;
+        margin-top: 21px;
+    }
+    #fSign{
+        background-color: #f2f2f2;
+        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif, Futura, "Century Gothic", "Gill Sans", Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing:1.2px;
+        line-height:13px;
+        padding: 8px 55px 8px 55px;
+        border: none;
+        margin-left: -3px;
+        cursor: pointer;
+    }
+    #femail{
+        border: 1px solid gainsboro;
+        padding: 4.8px 55px 4px 9px;
+    }
+  #four{
+      margin-left: 96px;
+  }
+  .line3{
+        height: 1.2px;
+        width: 77.3%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 26px;
+        margin-bottom: 20px;
+    }
+    #footer-payment{
+        display: flex;
+        margin-left: 160px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+        color: gray;
+    }
+    #ame{
+        margin-left: 15px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    #visa{
+        margin-left: 15px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    #master{
+        margin-left: 15px;
+        margin-top: 10px; 
+        cursor: pointer;
+    }
+    #diners{
+        margin-left: 15px;
+        margin-top: 10px;  
+        cursor: pointer;
+    }
+    #jcb{
+        margin-left: 15px;
+        margin-top: 9px;  
+        cursor: pointer;
+    }
+    #union{
+        margin-left: 15px;
+        margin-top: 7px;  
+        cursor: pointer;
+    }
+    #disc{
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    #paypal{
+        margin-left: 15px;
+        margin-top: -10px;
+        cursor: pointer;
+    }
+    #deli{
+        margin-left: 442px;
+    }
+    #dhl{
+        margin-top: -8px;
+        margin-left: 11px;
+        cursor: pointer;
+    }
+    .line4{
+        height: 1.2px;
+        width: 77.3%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 26px;
+        margin-bottom: 20px;
+    }
+    #copyR{
+        display: flex;
+        margin-left: 160px;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight:400;
+        letter-spacing: 0.5px;
+        color: gray;
+        margin-bottom: 30px;
+    }
+    #copyR div:nth-child(2) {
+        margin-left: 630px;
+        cursor: pointer;
+    }
+    #copyR div:nth-child(3) {
+        margin-left: 16px;
+        cursor: pointer;
+    }
+    #copyR div:nth-child(4) {
+        margin-left: 16px;
+        cursor: pointer;
+    }
+   
+</style>
+
+<body>
+
+
+   
+    <div id="navbar">
+        <div id="women">WOMEN</div>
+        <div id="men">MEN</div>
+        <div id="kids">KIDS</div>
+        <div id="sign">Signup for Newsletter</div>
+        <div id="acc">My account </div>
+        <div id="wishlist">My wishlist</div>
+        <div class="heartN sizeN"></div> 
+        <div id="india">India|English</div>
+    </div>
+    
+    <img id="mytheresa" src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220201T173402">
+    <div id="sbag">SHOPPING BAG</div>
+    <div id="bagTxt"> 
+    <span> <img id="bag" src="https://cdn.iconscout.com/icon/free/png-64/shopping-bag-2127590-1792575.png"> </span>
+    <span class="count">0</span>
+    </div>
+    
+    
+    <div id="categories">
+        <div id="newArri">NEW ARRIVALS</div>
+        <div class="marginSize" id="designer">DESIGNERS</div>
+        <div class="marginSize" id="clothing">CLOTHING</div>
+        <div class="marginSize" id="shoes">SHOES</div>
+        <div class="marginSize" id="bags">BAGS</div>
+        <div class="marginSize" id="accesories">ACCESSORIES</div>
+        <div class="marginSize" id="jewellery">JEWELRY</div>
+        <div class="marginSize" id="vacation">VACATION</div>
+        <div class="marginSize" id="sale">SALE</div>
+        <input id="search" placeholder="Search for...">
+    </div>
+    
+    <div id="fullLine"></div>
+    
+    <!-- ------------------------------- hover categories ------------------------------------- -->
+    
+    <div id="arrival">
+        <div id="smokeStrip">
+            <span>JUST IN</span>
+            <span>DISCOVER</span>
+        </div>
+    
+    <div id="inn"> 
+        <div>
+            <ul>
+                <li>This Week</li>
+                <li class="space">Previous Weeks</li>
+                <li class="space">Clothing</li>
+                <li class="space">Shoes</li>
+                <li class="space">Bags</li>
+                <li class="space">Accesories</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Cold Weather Edit</li>
+                <li class="space">The Ski Edit</li>
+                <li class="space">Essentials</li>
+                <li class="space">The Home Edit</li>
+                <li class="space">Wedding Guest</li>
+                <li class="space">Bridal</li>
+                <li class="space">Stories</li>
+            </ul>
+        </div>
+        <div id="whiwomen"> <img width="678px" height="397px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_NA_Flyout_1414x940_2x_20220218101640.jpg"> </div>
+    </div>
+    </div>
+    
+    
+    
+    <div id="designerC">
+        <div id="smokeStrip1">
+            <span>TOP 20</span>
+            <span>BRAND HIGHLIGHTS</span>
+        </div>
+    
+    <div id="inn1"> 
+        <div>
+            <ul>
+                <li>Acne Studios</li>
+                <li class="space">Alexander McQueen</li>
+                <li class="space">Balenciaga</li>
+                <li class="space">Bottega Veneta</li>
+                <li class="space">Brunello Cucinelli</li>
+                <li class="space">Burberry</li>
+                <li class="space">Chloe</li>
+                <li class="space">Dolce & Gabbana</li>
+                <li class="space">Fendi</li>
+                <li class="space">Gianvito Rossi</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Golden Goose</li>
+                <li class="space">Gucci</li>
+                <li class="space">Isabel Marant</li>
+                <li class="space">Isabel Marant Etoile</li>
+                <li class="space">Jimmy Choo</li>
+                <li class="space">Loewe</li>
+                <li class="space">Maison Margiela</li>
+                <li class="space">Roger Vivier</li>
+                <li class="space">Saint Laurent</li>
+                <li class="space">Valentino</li>
+                <li class="space">Designers A-Z</li>
+                <li class="space">New Designers A-Z</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Christopher Esber</li>
+                <li class="space">Dior Eyewear</li>
+                <li class="space">Eera</li>
+                <li class="space">Eres</li>
+                <li class="space">Gia Borghini</li>
+                <li class="space">Jacquemus</li>
+                <li class="space">Jil Sander</li>
+                <li class="space">Khaite</li>
+                <li class="space">Lemaire</li>
+                <li class="space">Nensi Dojaka</li>
+                <li class="space">Sir</li>
+                <li class="space">The Row</li>
+                <li class="space">Tom Ford</li>
+                <li class="space">Toteme</li>
+            </ul>
+        </div>
+        <div id="sunglass"> <img width="450px" height="396px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/Flyout_missdior-2x_20220222111604.jpg"> </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="wk">
+    <p>WOMEN</p>
+    <p>KIDS</p>
+</div>    
+   
+<div id="menSale">
+    <p>Men / Sale / Sky wear >></p>
+    <select id="select" onchange="get()">
+        <option value="">Sort by</option>
+        <option value="low">Price low-to-high</option>
+        <option value="high">Price high-to-low</option>
+    </select>
+    <!-- <p>Sort by</p> 
+     <div id="down"> <img height="25px" width="25px" src="https://cdn.iconscout.com/icon/free/png-64/dropdown-25-475073.png"> </div> -->
+</div>
+
+
+
+<div id="line"></div>
+
+
+<div id="catPro">
+    <div id="sortCat">
+        <div id="one">
+            <ul>
+                <li>SALE</li>
+                <li>Show all</li>
+                <li class="s">Clothing</li>
+                <li class="s">Shoes</li>
+                <li class="s">Bags</li>
+                <li class="s">Accessories</li>
+                <li class="s">Previous seasons</li>
+                <li>Ski wear</li>
+            </ul>
+        </div>
+        <div id="line2"></div>
+        <div id="desi">
+            <p>Designer</p>
+             <div> <img height="25px" width="25px" src="https://cdn.iconscout.com/icon/free/png-64/dropdown-25-475073.png">  </div>
+        </div>
+        <input id="inp">
+        <form id="design">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> And Wander</label><br>
+            <input type="checkbox"  class="desil" name="vehicle2" value="Car">
+            <label for="vehicle2" > Aztech Mountain</label><br>
+            <input type="checkbox"  class="desil" name="vehicle3" value="Boat">
+            <label for="vehicle3" >Bogner</label><br>
+            <input type="checkbox"  class="desil" name="vehicle1" value="Bike">
+            <label for="vehicle1" >Fusalp</label><br>
+            <input type="checkbox" class="desil" name="vehicle2" value="Car">
+            <label for="vehicle2" >Stone Island</label><br>
+            <input type="checkbox" class="desil" name="vehicle3" value="Boat">
+            <label for="vehicle3" >The North Face</label><br>
+          </form>
+          <div id="line3"></div>
+          <div id="size">
+            <p>Size</p>
+             <div> <img height="25px" width="25px" src="https://cdn.iconscout.com/icon/free/png-64/dropdown-25-475073.png">  </div>
+        </div>
+        <div id="dsizes">
+            <div id="sizeT">
+                <input type="checkbox" id="xs"  value="xs">
+                <label for="vehicle1">XS</label><br>
+                <input type="checkbox" id="s" onclick="s()" class="desil" name="vehicle2" value="s">
+                <label for="vehicle2" >S</label><br>
+                <input type="checkbox" id="m" class="desil" onclick="m()"  name="vehicle3" value="m">
+                <label for="vehicle3" >M</label><br>
+                <input type="checkbox" id="l" class="desil" onclick="l()"  name="vehicle1" value="l">
+                <label for="vehicle1" >L</label><br>
+                <input type="checkbox" id="xl" class="desil" name="vehicle2" value="xl">
+                <label for="vehicle2" >XL</label><br>
+                <input type="checkbox" id="xxl" class="desil" name="vehicle3" value="xxl">
+                <label for="vehicle3" >XXL</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="3xl">
+                <label for="vehicle3" >3XL</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="eu38">
+                <label for="vehicle3" >EU 38,5</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="eu40">
+                <label for="vehicle3" >EU 40</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="eu41">
+                <label for="vehicle3" >EU 41</label><br>
+            </div>
+        </div>
+        <div id="line3"></div>
+        <div id="colors">
+            <p>Colours</p>
+             <div> <img height="25px" width="25px" src="https://cdn.iconscout.com/icon/free/png-64/dropdown-25-475073.png">  </div>
+        </div>
+        <div id="dcol">
+            <div id="dcolors">
+                <input type="checkbox" id="vehicle1" onclick="beige()" name="vehicle1" value="Bike">
+                <label for="vehicle1">Beige</label><br>
+                <input type="checkbox"  class="desil" onclick="black()" name="vehicle2" value="Car">
+                <label for="vehicle2" >Black</label><br>
+                <input type="checkbox"  class="desil" onclick="blue()" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Blue</label><br>
+                <input type="checkbox"  class="desil" onclick="brown()" name="vehicle1" value="Bike">
+                <label for="vehicle1" >Brown</label><br>
+                <input type="checkbox" class="desil" onclick="green()" name="vehicle2" value="Car">
+                <label for="vehicle2" >Green</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Grey</label><br>
+                <input type="checkbox" class="desil" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Neutrals</label><br>
+                <input type="checkbox" class="desil" onclick="red()" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Red</label><br>
+                <input type="checkbox" class="desil" onclick="white()" name="vehicle3" value="Boat">
+                <label for="vehicle3" >White</label><br>
+                <input type="checkbox" class="desil" onclick="yellow()" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Yellow</label><br>
+              </div>
+        </div>
+        <div id="line4"></div>
+        <div id="pattern">
+            <p>Pattern</p>
+             <div> <img height="25px" width="25px" src="https://cdn.iconscout.com/icon/free/png-64/dropdown-25-475073.png">  </div>
+        </div>
+        <div id="dpat">
+            <form id="dpatterns">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1">Camouflage</label><br>
+                <input type="checkbox"  class="desil" name="vehicle2" value="Car">
+                <label for="vehicle2" >Checked</label><br>
+                <input type="checkbox"  class="desil" name="vehicle3" value="Boat">
+                <label for="vehicle3" >Plain</label><br>
+                <input type="checkbox"  class="desil" name="vehicle1" value="Bike">
+                <label for="vehicle1" >Printed</label><br>
+                <input type="checkbox" class="desil" name="vehicle2" value="Car">
+                <label for="vehicle2" >Striped</label><br>
+              </form>
+        </div>
+        <div id="line5"></div>
+    </div>
+
+
+    <div id="prod">
+        <div id="container">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- --------------------- footer start -------------------------  -->
+
+<div class="insLine"></div>
+
+<div id="aboutInfo"> 
+<p id="title">MYTHERESA – WOMEN’S LUXURY AND DESIGNER FASHION</p>
+<p id="txt">Mytheresa is the most-trusted source for finding the finest selection of luxurious womenswear. Our expert buying team travels the globe with a simple mission: to bring international fashion’s finest directly to your doorstep. With our runway-fresh new arrivals every week, an easy-to-navigate platform and a mobile app to shop on-the-go, we ensure a boutique-like feeling for a unique shopping experience.</p>
+<div id="luxury">
+    <p>A LUXURY SHOPPING EXPERIENCE</p>
+    <ul>
+        <li>The finest edit of more than 200 international luxury brands</li>
+        <li>900 new arrivals each week directly from the runway</li>
+        <li>Well-curated selection of items for a boutique-like shopping experience</li>
+        <li>Exclusive designer collaborations and capsule collections that you won’t find anywhere else</li>
+    </ul>
+</div>
+<div id="service">
+    <p>SERVICE AND QUALITY</p>
+    <ul>
+        <li>Authentic products guaranteed</li>
+        <li>Fast, reliable delivery within 3 business days</li>
+        <li>Free returns and exchanges within 30 days</li>
+        <li>Exceptional customer service available 24 hours a day, 6 days a week in 13 different languages</li>
+    </ul>
+</div>
+<p class="lastInf1">Whether you are looking for the latest Bottega Veneta pouch for everyday wear, Jimmy Choo heels for an upcoming wedding, or a Burberry scarf to gift a friend, our edit comprises the key pieces that you need for an elegant season ahead. With our assortment of timeless items and exclusive capsule collections, which includes everything from the understated luxury of Loro Piana and avant-garde appeal of Maison Margiela, to Saint Laurent bags and time-honored Gucci loafers; you are certain to find everything you want to build your dream closet.</p>
+<p class="lastInf2">Get inspired by our coveted edit, which makes occasion dressing easy by breaking down our buy into easy-to-shop categories such as fashion sneakers or exquisite gowns. Our exceptional customer service team is here to help you through every step of the order process, and beyond, to make sure you start every day dressed to conquer.</p>
+<p class="lastInf3">Shop with us and discover why Mytheresa is your final destination for online shopping for women.</p>
+</div>
+
+
+
+<div class="line1"></div>
+
+<div id="shop">SHOP WHENEVER, WHEREVER WITH THE APP</div>
+
+<div class="app-badges"><svg id="US_UK_Download_on_the" onclick="location.href='https://app.adjust.com/rs5oyx5?campaign=app_in_footer&amp;adgroup=adgroup&amp;creative=english'" style="enable-background:new 0 0 135 40; width:118px; height: 35px; cursor:pointer;" version="1.1" viewBox="0 0 135 40" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+    <style type="text/css">.st0{fill:#FFFFFF;}
+    </style>
+    <g> <path d="M130.2,40H5c-2.8,0-5-2.2-5-5V5c0-2.8,2.2-5,5-5h125c2.8,0,5,2.2,5,5v30.3C135,37.9,132.8,40,130.2,40L130.2,40z"></path> <g> <g> <path class="st0" d="M30.1,19.8c0-3.2,2.6-4.8,2.8-4.9c-1.5-2.2-3.9-2.5-4.7-2.5c-2-0.2-3.9,1.2-4.9,1.2c-1,0-2.6-1.2-4.2-1.1
+                    c-2.1,0-4.1,1.3-5.2,3.2c-2.3,3.9-0.6,9.7,1.6,12.9c1.1,1.6,2.4,3.3,4,3.2c1.6-0.1,2.2-1,4.2-1c1.9,0,2.5,1,4.2,1
+                    c1.7,0,2.8-1.6,3.9-3.1c1.3-1.8,1.8-3.5,1.8-3.6C33.5,24.9,30.2,23.6,30.1,19.8z"></path> <path class="st0" d="M26.9,10.3c0.9-1.1,1.5-2.6,1.3-4.1c-1.3,0.1-2.8,0.9-3.8,1.9c-0.8,0.9-1.5,2.5-1.3,3.9
+                    C24.6,12.2,26,11.4,26.9,10.3z"></path> </g> </g> <g> <path class="st0" d="M53.6,31.5h-2.3l-1.2-3.9h-4.3l-1.2,3.9h-2.2l4.3-13.3h2.6L53.6,31.5z M49.8,26l-1.1-3.5
+                c-0.1-0.4-0.3-1.2-0.7-2.5h0c-0.1,0.6-0.3,1.4-0.6,2.5L46.2,26H49.8z"></path> <path class="st0" d="M64.7,26.6c0,1.6-0.4,2.9-1.3,3.9c-0.8,0.8-1.8,1.3-2.9,1.3c-1.3,0-2.2-0.5-2.7-1.4h0v5.1h-2.1V25.1
+                c0-1,0-2.1-0.1-3.2h1.9l0.1,1.5h0c0.7-1.1,1.8-1.7,3.2-1.7c1.1,0,2.1,0.4,2.8,1.3C64.3,23.9,64.7,25.1,64.7,26.6z M62.5,26.7
+                c0-0.9-0.2-1.7-0.6-2.3c-0.5-0.6-1.1-0.9-1.9-0.9c-0.5,0-1,0.2-1.4,0.5c-0.4,0.3-0.7,0.8-0.8,1.4c-0.1,0.3-0.1,0.5-0.1,0.7v1.6
+                c0,0.7,0.2,1.3,0.6,1.8c0.4,0.5,1,0.7,1.7,0.7c0.8,0,1.4-0.3,1.9-0.9C62.3,28.5,62.5,27.7,62.5,26.7z"></path> <path class="st0" d="M75.7,26.6c0,1.6-0.4,2.9-1.3,3.9c-0.8,0.8-1.8,1.3-2.9,1.3c-1.3,0-2.2-0.5-2.7-1.4h0v5.1h-2.1V25.1
+                c0-1,0-2.1-0.1-3.2h1.9l0.1,1.5h0c0.7-1.1,1.8-1.7,3.2-1.7c1.1,0,2.1,0.4,2.8,1.3C75.3,23.9,75.7,25.1,75.7,26.6z M73.5,26.7
+                c0-0.9-0.2-1.7-0.6-2.3c-0.5-0.6-1.1-0.9-1.9-0.9c-0.5,0-1,0.2-1.4,0.5c-0.4,0.3-0.7,0.8-0.8,1.4c-0.1,0.3-0.1,0.5-0.1,0.7v1.6
+                c0,0.7,0.2,1.3,0.6,1.8c0.4,0.5,1,0.7,1.7,0.7c0.8,0,1.4-0.3,1.9-0.9C73.3,28.5,73.5,27.7,73.5,26.7z"></path> <path class="st0" d="M88,27.8c0,1.1-0.4,2.1-1.2,2.8c-0.9,0.8-2.1,1.2-3.6,1.2c-1.4,0-2.6-0.3-3.4-0.8l0.5-1.8
+                c0.9,0.6,2,0.8,3.1,0.8c0.8,0,1.4-0.2,1.9-0.5c0.4-0.4,0.7-0.8,0.7-1.5c0-0.5-0.2-1-0.6-1.4c-0.4-0.4-1-0.7-1.8-1
+                c-2.3-0.9-3.5-2.1-3.5-3.8c0-1.1,0.4-2,1.2-2.7c0.8-0.7,1.9-1,3.3-1c1.2,0,2.2,0.2,3,0.6L87,20.4c-0.8-0.4-1.6-0.6-2.5-0.6
+                c-0.8,0-1.3,0.2-1.8,0.6c-0.4,0.3-0.5,0.7-0.5,1.2c0,0.5,0.2,1,0.6,1.3c0.4,0.3,1,0.7,1.9,1c1.1,0.5,2,1,2.5,1.6
+                C87.8,26.1,88,26.9,88,27.8z"></path> <path class="st0" d="M95.1,23.5h-2.3v4.7c0,1.2,0.4,1.8,1.2,1.8c0.4,0,0.7,0,0.9-0.1l0.1,1.6c-0.4,0.2-1,0.2-1.7,0.2
+                c-0.8,0-1.5-0.3-2-0.8c-0.5-0.5-0.7-1.4-0.7-2.6v-4.8h-1.4v-1.6h1.4v-1.8l2.1-0.6v2.4h2.3V23.5z"></path> <path class="st0" d="M105.7,26.6c0,1.5-0.4,2.7-1.3,3.6c-0.9,1-2.1,1.5-3.5,1.5c-1.4,0-2.5-0.5-3.4-1.4c-0.8-0.9-1.3-2.1-1.3-3.5
+                c0-1.5,0.4-2.7,1.3-3.7c0.9-0.9,2-1.4,3.5-1.4c1.4,0,2.5,0.5,3.4,1.4C105.3,24,105.7,25.2,105.7,26.6z M103.5,26.7
+                c0-0.9-0.2-1.6-0.6-2.3c-0.4-0.8-1.1-1.1-1.9-1.1c-0.9,0-1.5,0.4-2,1.1c-0.4,0.6-0.6,1.4-0.6,2.3c0,0.9,0.2,1.6,0.6,2.3
+                c0.5,0.8,1.1,1.1,1.9,1.1c0.8,0,1.5-0.4,1.9-1.2C103.3,28.3,103.5,27.6,103.5,26.7z"></path> <path class="st0" d="M112.6,23.8c-0.2,0-0.4-0.1-0.7-0.1c-0.8,0-1.3,0.3-1.7,0.8c-0.4,0.5-0.5,1.1-0.5,1.9v5h-2.1l0-6.6
+                c0-1.1,0-2.1-0.1-3h1.9l0.1,1.8h0.1c0.2-0.6,0.6-1.1,1.1-1.5c0.5-0.3,1-0.5,1.5-0.5c0.2,0,0.4,0,0.5,0V23.8z"></path> <path class="st0" d="M122.2,26.3c0,0.4,0,0.7-0.1,1h-6.4c0,0.9,0.3,1.7,0.9,2.2c0.5,0.4,1.2,0.7,2.1,0.7c0.9,0,1.8-0.2,2.6-0.5
+                l0.3,1.5c-0.9,0.4-2,0.6-3.2,0.6c-1.5,0-2.7-0.4-3.5-1.3c-0.8-0.9-1.3-2-1.3-3.5c0-1.4,0.4-2.7,1.2-3.6c0.8-1,1.9-1.5,3.4-1.5
+                c1.4,0,2.4,0.5,3.1,1.5C121.9,24,122.2,25.1,122.2,26.3z M120.1,25.7c0-0.6-0.1-1.2-0.4-1.6c-0.4-0.6-0.9-0.9-1.7-0.9
+                c-0.7,0-1.3,0.3-1.7,0.9c-0.4,0.5-0.6,1-0.6,1.7H120.1z"></path> </g> <g> <g> <path class="st0" d="M49.1,10c0,1.2-0.4,2.1-1.1,2.7c-0.7,0.5-1.6,0.8-2.8,0.8c-0.6,0-1.1,0-1.5-0.1V7c0.6-0.1,1.2-0.1,1.8-0.1
+                    c1.1,0,2,0.2,2.6,0.7C48.7,8.2,49.1,9,49.1,10z M47.9,10c0-0.8-0.2-1.3-0.6-1.8c-0.4-0.4-1-0.6-1.8-0.6c-0.3,0-0.6,0-0.8,0.1v4.9
+                    c0.1,0,0.4,0,0.7,0c0.8,0,1.4-0.2,1.9-0.7C47.7,11.5,47.9,10.9,47.9,10z"></path> <path class="st0" d="M54.9,11c0,0.7-0.2,1.3-0.6,1.8c-0.4,0.5-1,0.7-1.7,0.7c-0.7,0-1.2-0.2-1.7-0.7c-0.4-0.5-0.6-1-0.6-1.7
+                    c0-0.7,0.2-1.3,0.6-1.8c0.4-0.5,1-0.7,1.7-0.7c0.7,0,1.2,0.2,1.7,0.7C54.7,9.8,54.9,10.3,54.9,11z M53.8,11.1
+                    c0-0.4-0.1-0.8-0.3-1.1c-0.2-0.4-0.5-0.6-0.9-0.6c-0.4,0-0.7,0.2-1,0.6c-0.2,0.3-0.3,0.7-0.3,1.1c0,0.4,0.1,0.8,0.3,1.1
+                    c0.2,0.4,0.5,0.6,1,0.6c0.4,0,0.7-0.2,0.9-0.6C53.7,11.9,53.8,11.5,53.8,11.1z"></path> <path class="st0" d="M62.8,8.7l-1.5,4.7h-1l-0.6-2c-0.2-0.5-0.3-1-0.4-1.5h0c-0.1,0.5-0.2,1-0.4,1.5l-0.6,2h-1l-1.4-4.7H57
+                    l0.5,2.2c0.1,0.5,0.2,1,0.3,1.5h0c0.1-0.4,0.2-0.9,0.4-1.5l0.7-2.3h0.9l0.6,2.2c0.2,0.5,0.3,1.1,0.4,1.6h0c0.1-0.5,0.2-1,0.3-1.6
+                    l0.6-2.2H62.8z"></path> <path class="st0" d="M68.2,13.4h-1v-2.7c0-0.8-0.3-1.2-1-1.2c-0.3,0-0.6,0.1-0.8,0.3c-0.2,0.2-0.3,0.5-0.3,0.8v2.8h-1v-3.4
+                    c0-0.4,0-0.9,0-1.3H65l0,0.7h0c0.1-0.2,0.3-0.4,0.5-0.6c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.8,0.1,1.1,0.4c0.4,0.3,0.5,0.9,0.5,1.6
+                    V13.4z"></path> <path class="st0" d="M71.1,13.4h-1V6.6h1V13.4z"></path> <path class="st0" d="M77.3,11c0,0.7-0.2,1.3-0.6,1.8c-0.4,0.5-1,0.7-1.7,0.7c-0.7,0-1.2-0.2-1.7-0.7c-0.4-0.5-0.6-1-0.6-1.7
+                    c0-0.7,0.2-1.3,0.6-1.8c0.4-0.5,1-0.7,1.7-0.7c0.7,0,1.2,0.2,1.7,0.7C77.1,9.8,77.3,10.3,77.3,11z M76.2,11.1
+                    c0-0.4-0.1-0.8-0.3-1.1c-0.2-0.4-0.5-0.6-0.9-0.6c-0.4,0-0.7,0.2-1,0.6c-0.2,0.3-0.3,0.7-0.3,1.1c0,0.4,0.1,0.8,0.3,1.1
+                    c0.2,0.4,0.5,0.6,1,0.6c0.4,0,0.7-0.2,0.9-0.6C76.1,11.9,76.2,11.5,76.2,11.1z"></path> <path class="st0" d="M82.3,13.4h-0.9l-0.1-0.5h0c-0.3,0.4-0.8,0.6-1.4,0.6c-0.4,0-0.8-0.1-1.1-0.4c-0.2-0.3-0.4-0.6-0.4-1
+                    c0-0.6,0.2-1,0.7-1.3c0.5-0.3,1.2-0.5,2-0.4v-0.1c0-0.6-0.3-0.9-1-0.9c-0.5,0-0.9,0.1-1.2,0.3L78.8,9c0.4-0.3,1-0.4,1.6-0.4
+                    c1.2,0,1.8,0.6,1.8,1.9v1.7C82.3,12.8,82.3,13.2,82.3,13.4z M81.2,11.8v-0.7c-1.2,0-1.7,0.3-1.7,1c0,0.2,0.1,0.4,0.2,0.6
+                    c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2c0.2-0.1,0.3-0.3,0.4-0.6C81.2,11.9,81.2,11.9,81.2,11.8z"></path> <path class="st0" d="M88.3,13.4h-0.9l0-0.8h0c-0.3,0.6-0.8,0.9-1.5,0.9c-0.6,0-1-0.2-1.4-0.7c-0.4-0.4-0.6-1-0.6-1.7
+                    c0-0.8,0.2-1.4,0.6-1.9c0.4-0.4,0.9-0.7,1.5-0.7c0.6,0,1.1,0.2,1.3,0.6h0V6.6h1v5.6C88.2,12.6,88.3,13,88.3,13.4z M87.2,11.4
+                    v-0.8c0-0.1,0-0.2,0-0.3c-0.1-0.3-0.2-0.5-0.4-0.6c-0.2-0.2-0.4-0.3-0.7-0.3c-0.4,0-0.7,0.2-0.9,0.5c-0.2,0.3-0.3,0.7-0.3,1.2
+                    c0,0.5,0.1,0.8,0.3,1.1c0.2,0.3,0.5,0.5,0.9,0.5c0.3,0,0.6-0.1,0.8-0.4C87.1,12.1,87.2,11.8,87.2,11.4z"></path> <path class="st0" d="M97.2,11c0,0.7-0.2,1.3-0.6,1.8c-0.4,0.5-1,0.7-1.7,0.7c-0.7,0-1.2-0.2-1.7-0.7c-0.4-0.5-0.6-1-0.6-1.7
+                    c0-0.7,0.2-1.3,0.6-1.8c0.4-0.5,1-0.7,1.7-0.7c0.7,0,1.2,0.2,1.7,0.7C97,9.8,97.2,10.3,97.2,11z M96.2,11.1
+                    c0-0.4-0.1-0.8-0.3-1.1c-0.2-0.4-0.5-0.6-0.9-0.6c-0.4,0-0.7,0.2-1,0.6c-0.2,0.3-0.3,0.7-0.3,1.1c0,0.4,0.1,0.8,0.3,1.1
+                    c0.2,0.4,0.5,0.6,1,0.6c0.4,0,0.7-0.2,0.9-0.6C96.1,11.9,96.2,11.5,96.2,11.1z"></path> <path class="st0" d="M102.9,13.4h-1v-2.7c0-0.8-0.3-1.2-1-1.2c-0.3,0-0.6,0.1-0.8,0.3s-0.3,0.5-0.3,0.8v2.8h-1v-3.4
+                    c0-0.4,0-0.9,0-1.3h0.9l0,0.7h0c0.1-0.2,0.3-0.4,0.5-0.6c0.3-0.2,0.6-0.3,1-0.3c0.4,0,0.8,0.1,1.1,0.4c0.4,0.3,0.5,0.9,0.5,1.6
+                    V13.4z"></path> <path class="st0" d="M109.9,9.5h-1.2v2.3c0,0.6,0.2,0.9,0.6,0.9c0.2,0,0.3,0,0.5,0l0,0.8c-0.2,0.1-0.5,0.1-0.8,0.1
+                    c-0.4,0-0.7-0.1-1-0.4c-0.2-0.3-0.3-0.7-0.3-1.3V9.5h-0.7V8.7h0.7V7.9l1-0.3v1.2h1.2V9.5z"></path> <path class="st0" d="M115.5,13.4h-1v-2.7c0-0.8-0.3-1.3-0.9-1.3c-0.5,0-0.8,0.2-1,0.7c0,0.1,0,0.2,0,0.4v2.8h-1V6.6h1v2.8h0
+                    c0.3-0.5,0.8-0.8,1.4-0.8c0.4,0,0.8,0.1,1.1,0.4c0.4,0.4,0.5,0.9,0.5,1.6V13.4z"></path> <path class="st0" d="M121.2,10.9c0,0.2,0,0.3,0,0.5H118c0,0.5,0.2,0.8,0.5,1.1c0.3,0.2,0.6,0.3,1,0.3c0.5,0,0.9-0.1,1.3-0.2
+                    l0.2,0.7c-0.4,0.2-1,0.3-1.6,0.3c-0.7,0-1.3-0.2-1.7-0.6c-0.4-0.4-0.6-1-0.6-1.7c0-0.7,0.2-1.3,0.6-1.8c0.4-0.5,1-0.8,1.6-0.8
+                    c0.7,0,1.2,0.3,1.5,0.8C121.1,9.8,121.2,10.3,121.2,10.9z M120.2,10.6c0-0.3-0.1-0.6-0.2-0.8c-0.2-0.3-0.5-0.4-0.8-0.4
+                    c-0.3,0-0.6,0.1-0.8,0.4c-0.2,0.2-0.3,0.5-0.3,0.8H120.2z"></path> </g> </g> </g> </svg> <svg id="artwork" onclick="location.href='https://app.adjust.com/rs5oyx5?campaign=app_in_footer&amp;adgroup=adgroup&amp;creative=english'" style="enable-background:new 0 0 135 40;  width:118px; height: 35px; cursor:pointer; margin-left:5px;" version="1.1" viewBox="0 0 135 40" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+    <style type="text/css">.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:0.2;stroke-miterlimit:10;}
+        .st1{fill:#FFFFFF;}
+        .st2{fill:url(#SVGID_1_);}
+        .st3{fill:url(#SVGID_2_);}
+        .st4{fill:url(#SVGID_3_);}
+        .st5{fill:url(#SVGID_4_);}
+        .st6{opacity:0.2;enable-background:new    ;}
+        .st7{opacity:0.12;enable-background:new    ;}
+        .st8{opacity:0.25;fill:#FFFFFF;enable-background:new    ;}
+    </style>
+    <g> <path d="M130,40H5c-2.8,0-5-2.2-5-5V5c0-2.8,2.2-5,5-5h125c2.8,0,5,2.2,5,5v30C135,37.8,132.8,40,130,40z"></path> </g> <g> <path class="st0" d="M47.4,10.2c0,0.8-0.2,1.5-0.7,2c-0.6,0.6-1.3,0.9-2.2,0.9c-0.9,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.3-0.9-2.2
+            c0-0.9,0.3-1.6,0.9-2.2c0.6-0.6,1.3-0.9,2.2-0.9c0.4,0,0.8,0.1,1.2,0.3c0.4,0.2,0.7,0.4,0.9,0.7l-0.5,0.5c-0.4-0.5-0.9-0.7-1.6-0.7
+            c-0.6,0-1.2,0.2-1.6,0.7c-0.5,0.4-0.7,1-0.7,1.7s0.2,1.3,0.7,1.7c0.5,0.4,1,0.7,1.6,0.7c0.7,0,1.2-0.2,1.7-0.7
+            c0.3-0.3,0.5-0.7,0.5-1.2h-2.2V9.8h2.9C47.4,9.9,47.4,10.1,47.4,10.2z"></path> <path class="st0" d="M52,7.7h-2.7v1.9h2.5v0.7h-2.5v1.9H52V13h-3.5V7H52V7.7z"></path> <path class="st0" d="M55.3,13h-0.8V7.7h-1.7V7H57v0.7h-1.7V13z"></path> <path class="st0" d="M59.9,13V7h0.8v6H59.9z"></path> <path class="st0" d="M64.1,13h-0.8V7.7h-1.7V7h4.1v0.7h-1.7V13z"></path> <path class="st0" d="M73.6,12.2c-0.6,0.6-1.3,0.9-2.2,0.9c-0.9,0-1.6-0.3-2.2-0.9c-0.6-0.6-0.9-1.3-0.9-2.2s0.3-1.6,0.9-2.2
+            c0.6-0.6,1.3-0.9,2.2-0.9c0.9,0,1.6,0.3,2.2,0.9c0.6,0.6,0.9,1.3,0.9,2.2C74.5,10.9,74.2,11.6,73.6,12.2z M69.8,11.7
+            c0.4,0.4,1,0.7,1.6,0.7c0.6,0,1.2-0.2,1.6-0.7c0.4-0.4,0.7-1,0.7-1.7S73.5,8.7,73,8.3c-0.4-0.4-1-0.7-1.6-0.7
+            c-0.6,0-1.2,0.2-1.6,0.7c-0.4,0.4-0.7,1-0.7,1.7S69.3,11.3,69.8,11.7z"></path> <path class="st0" d="M75.6,13V7h0.9l2.9,4.7h0l0-1.2V7h0.8v6h-0.8l-3.1-4.9h0l0,1.2V13H75.6z"></path> </g> <path class="st1" d="M68.1,21.8c-2.4,0-4.3,1.8-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.8,4.3-4.3C72.4,23.5,70.5,21.8,68.1,21.8
+        z M68.1,28.6c-1.3,0-2.4-1.1-2.4-2.6c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.4,1,2.4,2.6C70.5,27.5,69.4,28.6,68.1,28.6z M58.8,21.8
+        c-2.4,0-4.3,1.8-4.3,4.3c0,2.4,1.9,4.3,4.3,4.3c2.4,0,4.3-1.8,4.3-4.3C63.1,23.5,61.2,21.8,58.8,21.8z M58.8,28.6
+        c-1.3,0-2.4-1.1-2.4-2.6c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.4,1,2.4,2.6C61.2,27.5,60.1,28.6,58.8,28.6z M47.7,23.1v1.8h4.3
+        c-0.1,1-0.5,1.8-1,2.3c-0.6,0.6-1.6,1.3-3.3,1.3c-2.7,0-4.7-2.1-4.7-4.8s2.1-4.8,4.7-4.8c1.4,0,2.5,0.6,3.3,1.3l1.3-1.3
+        c-1.1-1-2.5-1.8-4.5-1.8c-3.6,0-6.7,3-6.7,6.6c0,3.6,3.1,6.6,6.7,6.6c2,0,3.4-0.6,4.6-1.9c1.2-1.2,1.6-2.9,1.6-4.2
+        c0-0.4,0-0.8-0.1-1.1H47.7z M93.1,24.5c-0.4-1-1.4-2.7-3.6-2.7c-2.2,0-4,1.7-4,4.3c0,2.4,1.8,4.3,4.2,4.3c1.9,0,3.1-1.2,3.5-1.9
+        l-1.4-1c-0.5,0.7-1.1,1.2-2.1,1.2c-1,0-1.6-0.4-2.1-1.3l5.7-2.4L93.1,24.5z M87.3,25.9c0-1.6,1.3-2.5,2.2-2.5c0.7,0,1.4,0.4,1.6,0.9
+        L87.3,25.9z M82.6,30h1.9V17.5h-1.9V30z M79.6,22.7L79.6,22.7c-0.5-0.5-1.3-1-2.3-1c-2.1,0-4.1,1.9-4.1,4.3c0,2.4,1.9,4.2,4.1,4.2
+        c1,0,1.8-0.5,2.2-1h0.1v0.6c0,1.6-0.9,2.5-2.3,2.5c-1.1,0-1.9-0.8-2.1-1.5l-1.6,0.7c0.5,1.1,1.7,2.5,3.8,2.5c2.2,0,4-1.3,4-4.4V22
+        h-1.8V22.7z M77.4,28.6c-1.3,0-2.4-1.1-2.4-2.6c0-1.5,1.1-2.6,2.4-2.6c1.3,0,2.3,1.1,2.3,2.6C79.7,27.5,78.7,28.6,77.4,28.6z
+         M101.8,17.5h-4.5V30h1.9v-4.7h2.6c2.1,0,4.1-1.5,4.1-3.9S103.9,17.5,101.8,17.5z M101.9,23.5h-2.7v-4.3h2.7c1.4,0,2.2,1.2,2.2,2.1
+        C104,22.4,103.2,23.5,101.9,23.5z M113.4,21.7c-1.4,0-2.8,0.6-3.3,1.9l1.7,0.7c0.4-0.7,1-0.9,1.7-0.9c1,0,1.9,0.6,2,1.6v0.1
+        c-0.3-0.2-1.1-0.5-1.9-0.5c-1.8,0-3.6,1-3.6,2.8c0,1.7,1.5,2.8,3.1,2.8c1.3,0,1.9-0.6,2.4-1.2h0.1v1h1.8v-4.8
+        C117.2,23,115.5,21.7,113.4,21.7z M113.2,28.6c-0.6,0-1.5-0.3-1.5-1.1c0-1,1.1-1.3,2-1.3c0.8,0,1.2,0.2,1.7,0.4
+        C115.2,27.8,114.2,28.6,113.2,28.6z M123.7,22l-2.1,5.4h-0.1l-2.2-5.4h-2l3.3,7.6l-1.9,4.2h1.9l5.1-11.8H123.7z M106.9,30h1.9V17.5
+        h-1.9V30z"></path> <g> <linearGradient gradientTransform="matrix(1 0 0 -1 0 182.0002)" gradientUnits="userSpaceOnUse" id="SVGID_1_" x1="21.7996" x2="5.0172" y1="173.2904" y2="156.508"> <stop offset="0" style="stop-color:#00A0FF"></stop> <stop offset="6.574450e-03" style="stop-color:#00A1FF"></stop> <stop offset="0.2601" style="stop-color:#00BEFF"></stop> <stop offset="0.5122" style="stop-color:#00D2FF"></stop> <stop offset="0.7604" style="stop-color:#00DFFF"></stop> <stop offset="1" style="stop-color:#00E3FF"></stop> </linearGradient> <path class="st2" d="M10.4,7.5C10.1,7.8,10,8.3,10,8.9v22.1c0,0.6,0.2,1.1,0.5,1.4l0.1,0.1l12.4-12.4V20v-0.1L10.4,7.5L10.4,7.5z"></path> <linearGradient gradientTransform="matrix(1 0 0 -1 0 182.0002)" gradientUnits="userSpaceOnUse" id="SVGID_2_" x1="33.8343" x2="9.6374" y1="161.9987" y2="161.9987"> <stop offset="0" style="stop-color:#FFE000"></stop> <stop offset="0.4087" style="stop-color:#FFBD00"></stop> <stop offset="0.7754" style="stop-color:#FFA500"></stop> <stop offset="1" style="stop-color:#FF9C00"></stop> </linearGradient> <path class="st3" d="M27,24.3l-4.1-4.1V20v-0.1l4.1-4.1l0.1,0.1l4.9,2.8c1.4,0.8,1.4,2.1,0,2.9L27,24.3L27,24.3z"></path> <linearGradient gradientTransform="matrix(1 0 0 -1 0 182.0002)" gradientUnits="userSpaceOnUse" id="SVGID_3_" x1="24.8269" x2="2.0686" y1="159.704" y2="136.9457"> <stop offset="0" style="stop-color:#FF3A44"></stop> <stop offset="1" style="stop-color:#C31162"></stop> </linearGradient> <path class="st4" d="M27.1,24.2L22.9,20L10.4,32.5c0.5,0.5,1.2,0.5,2.1,0.1L27.1,24.2"></path> <linearGradient gradientTransform="matrix(1 0 0 -1 0 182.0002)" gradientUnits="userSpaceOnUse" id="SVGID_4_" x1="7.2972" x2="17.4598" y1="181.8239" y2="171.6614"> <stop offset="0" style="stop-color:#32A071"></stop> <stop offset="6.850000e-02" style="stop-color:#2DA771"></stop> <stop offset="0.4762" style="stop-color:#15CF74"></stop> <stop offset="0.8009" style="stop-color:#06E775"></stop> <stop offset="1" style="stop-color:#00F076"></stop> </linearGradient> <path class="st5" d="M27.1,15.8L12.5,7.5c-0.9-0.5-1.6-0.4-2.1,0.1L22.9,20L27.1,15.8z"></path> <g> <path class="st6" d="M27,24.1l-14.5,8.2c-0.8,0.5-1.5,0.4-2,0l0,0l-0.1,0.1l0,0l0.1,0.1l0,0c0.5,0.4,1.2,0.5,2,0L27,24.1L27,24.1z
+                "></path> <path class="st7" d="M10.4,32.3C10.1,32,10,31.5,10,30.9v0.1c0,0.6,0.2,1.1,0.5,1.4V32.3L10.4,32.3z"></path> </g> <path class="st7" d="M32,21.3l-5,2.8l0.1,0.1l4.9-2.8c0.7-0.4,1-0.9,1-1.4l0,0C33,20.5,32.6,20.9,32,21.3z"></path> <path class="st8" d="M12.5,7.6L32,18.7c0.6,0.4,1,0.8,1,1.3l0,0c0-0.5-0.3-1-1-1.4L12.5,7.5C11.1,6.7,10,7.3,10,8.9v0.1
+            C10,7.5,11.1,6.8,12.5,7.6z">
+</path> </g> </svg></div>
+
+<div class="line2"></div>
+
+<div id="info">
+    <div id="one">
+        <ul id="none1">
+            <li>SERVICE & SECURITY</li>
+            <li class="li12"> <span>  <i class="fa-solid fa-check"></i> </span>
+           <span >Fast delivery</span> </li>
+            <li id="li13">Delivery within 2 business days</li>
+            <li class="li12"> <span>  <i class="fa-solid fa-check"></i> </span>
+            <span>Free returns within 30 days</span> </li>
+            <li id="li15">Convenient return service</li>
+            <li class="li12"> <span>  <i class="fa-solid fa-check"></i> </span>
+            <span>Secure payment and data</span>  </li>
+            <li id="li17">protection</li>
+            <li id="li18">SSL encryption for secure</li>
+            <li id="li19">transactions and personal data</li>
+        </ul>
+    </div>
+    <div id="two">
+        <ul id="none2">
+            <li>MYTHERESA</li>
+            <li class="mt">About us</li>
+            <li class="siCo">Trust & services</li>
+            <li class="siCo">Sustainability</li>
+            <li class="siCo">Press</li>
+            <li class="siCo">Careers</li>
+            <li class="siCo">Investor Relations</li>
+            <li class="siCo">Affiliates</li>
+        </ul>
+    </div>
+    <div id="three">
+        <ul id="none3">
+            <li>CUSTOMER</li>
+            <li>SERVICE</li>
+            <li class="mt">Contact us</li>
+            <li class="siCo">Shipping information</li>
+            <li class="siCo">Secure paymnet </li>
+            <li class="siCo">Exchanges</li>
+            <li class="siCo">Returns</li>
+            <li class="siCo">After sale service</li>
+            <li class="siCo">Gift card</li>
+        </ul>
+    </div>
+    <div id="four">
+        <p id="get">GET TREND UPDATES, STYLE TIPS AND MORE</p>
+        <input id="femail" type="text" placeholder="your email address here...">
+        <button id="fSign">SIGN UP</button>
+        <div id="wishHeart">
+         <p> Wish list </p>
+         <div class="heart size"></div>
+        </div>
+        <p id="receive">Receive personal notifications</p>
+        <p id="follow">Follow us on</p>
+        <div id="socialM"> 
+            <i class="fa-brands fa-linkedin fa-xl"></i>
+            <i class="fa-brands ml fa-facebook fa-xl"></i>
+            <i class="fa-brands ml fa-twitter fa-xl"></i>
+            <i class="fa-brands ml fa-pinterest fa-xl"></i>
+            <i class="fa-brands ml fa-instagram fa-xl"></i> 
+            <i class="fa-brands ml fa-youtube fa-xl"></i>
+            <img id="iPhone" height="28px" width="33px" src="https://cdn.iconscout.com/icon/free/png-64/iphone-270-475101.png">
+            <i class="fa-brands mlc fa-weixin fa-xl"></i>
+            <i class="fa-brands ml fa-weibo fa-xl"></i>     
+        </div>
+    </div>
+</div>
+
+<div class="line3"></div>
+
+<div id="footer-payment">
+    <p>payment methods:</p>
+    <div id="ame"> <img height="35px" width="25px" src="https://cdn-icons-png.flaticon.com/128/349/349228.png"> </div>
+    <div id="visa"> <img height="33px" width="33px" src="https://cdn-icons-png.flaticon.com/128/196/196578.png"> </div>
+    <div id="master"> <img height="25px" width="30px" src="https://tse2.mm.bing.net/th?id=OIP.Rg20imi8tLz9BmLKE5McUQHaHa&pid=Api&P=0&w=143&h=143"> </div>
+    <div id="diners"> <img height="23px" width="28px" src="https://tse1.mm.bing.net/th?id=OIP.htaH5OuurRHASp7G1Nw3SwHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121"> </div>
+    <div id="jcb"> <img height="25px" width="30px" src="https://cdn-icons-png.flaticon.com/128/196/196559.png"> </div>
+    <div id="union"> <img height="30px" width="30px" src="https://cdn-icons-png.flaticon.com/512/825/825484.png"> </div>
+    <div id="disc"> <img height="45px" width="45px" src="https://cdn-icons-png.flaticon.com/128/5968/5968311.png"> </div>
+    <div id="paypal"> <img height="65px" width="85px" src="https://cdn-icons-png.flaticon.com/128/196/196566.png"> </div>
+    <p id="deli">delivered by:</p>
+    <div id="dhl"> <img height="65px" width="71px" src="https://cdn-icons-png.flaticon.com/128/5977/5977580.png"> </div>
+</div>
+
+<div class="line4"></div>
+
+<div id="copyR">
+    <div> copyright © 2006-2022 mytheresa.com </div>
+    <div> terms of use </div>
+    <div> privacy policy </div>
+    <div> imprint </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+ 
+    document.getElementById("women").addEventListener("click",function() {
+    document.getElementById("men").style.backgroundColor="white";
+    document.getElementById("kids").style.backgroundColor="white";
+    document.getElementById("women").style.backgroundColor="#f2f2f2"; 
+    })
+   
+    document.getElementById("men").addEventListener("click",function() {
+    document.getElementById("women").style.backgroundColor="white";
+    document.getElementById("kids").style.backgroundColor="white";
+    document.getElementById("men").style.backgroundColor="#f2f2f2"; 
+    window.location.href = "men.html";
+    })
+   
+    document.getElementById("kids").addEventListener("click",function() {
+    document.getElementById("women").style.backgroundColor="white";
+    document.getElementById("men").style.backgroundColor="white";
+    document.getElementById("kids").style.backgroundColor="#f2f2f2"; 
+    window.location.href="kids.html";
+    })
+   
+    
+
+
+   
+    
+async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       
+         data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+
+
+let mainDiv = document.getElementById("container");
+
+function data(item) {
+
+item.forEach(function (product){
+
+// console.log(product);
+
+let div = document.createElement("div");
+div.setAttribute("id","item");
+
+let heartImg = document.createElement("div");
+heartImg.setAttribute("class","hsizeN");
+
+let heart = document.createElement("img");
+heart.src="https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png";
+heart.setAttribute("height","17px");
+heart.setAttribute("width","17px");
+
+heartImg.append(heart);
+
+// heartImg.addEventListener("mouseover",function() {
+//     heartImg.innerHTML = "";
+//     let heart = document.createElement("img");
+// heart.src="https://www.clipartkey.com/mpngs/m/34-347390_transparent-solid-clipart-grey-heart-icon-png.png";
+// heart.setAttribute("height","25px");
+// heart.setAttribute("width","25px");
+// heartImg.append(heart);
+// })
+
+
+// heartImg.addEventListener("mouseout",function() {
+//     heartImg.removeEventListener("mouseover",function() {
+//     heartImg.innerHTML = "";
+//     let heart = document.createElement("img");
+// heart.src="https://www.clipartkey.com/mpngs/m/34-347390_transparent-solid-clipart-grey-heart-icon-png.png";
+// heart.setAttribute("height","25px");
+// heart.setAttribute("width","25px");
+// heartImg.append(heart);
+// })
+// })
+
+
+let imgDiv = document.createElement("div");
+imgDiv.setAttribute("id","imgDiv");
+
+let img = document.createElement("img");
+img.src = product.img;
+img.setAttribute("height","306px");
+img.setAttribute("width","264px");
+
+imgDiv.append(img);
+
+// imgDiv.addEventListener("mouseenter",function() {
+//     imgDiv.innerHTML = "";
+//     let Himg = document.createElement("img");
+// Himg.src = product.Hoverimg;
+// Himg.setAttribute("height","255px");
+// Himg.setAttribute("width","255px");
+
+// imgDiv.append(Himg);
+// })
+
+// imgDiv.addEventListener("mouseleave",function() {
+//     imgDiv.innerHTML = "";  
+    
+// let imgDiv = document.createElement("div");
+// imgDiv.setAttribute("id","imgDiv");
+
+// let img = document.createElement("img");
+// img.src = product.img;
+// img.setAttribute("height","255px");
+// img.setAttribute("width","255px"); 
+// })
+
+
+let name = document.createElement("p");
+name.innerText=product.brand;
+name.setAttribute("id","name");
+
+let title = document.createElement("p");
+title.innerText = product.title;
+title.setAttribute("id","title");
+
+let price = document.createElement("p");
+price.innerText = `€ ${product.price}`;
+price.setAttribute("id","price");
+
+
+img.addEventListener("click",function() {
+    let detail = [];
+    // let detail = product._id;
+    // detail.push(product._id);
+    let obj = {
+        name:product.brand,
+        title:product.title,
+        price:product.price,
+         img:product.img
+        };
+         detail.push(obj);
+    localStorage.setItem("MenOneItem",JSON.stringify(detail));
+    window.location.href="menDetail.html";
+});
+
+
+div.append(heartImg,imgDiv,name,title,price);
+
+mainDiv.appendChild(div);
+
+});
+}
+
+
+function s () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?size=s`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function m () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?size=m`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function l () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?size=l`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function beige () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=beige`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function black () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=black`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function blue () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=blue`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function brown () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=brown`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function green () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=green`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function red () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=red`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function white () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=white`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function yellow () {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/viewmen?color=yellow`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+   
+function get () {
+var e = document.getElementById("select").value;
+// var strUser = e.options[e.selectedIndex];
+console.log(typeof e);  
+if(e === "high") {
+high();
+}
+ if(e === "low") {
+low();
+}
+}
+
+
+
+function high() {
+    console.log("hi");
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/dec`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+function low() {
+    async function showF() {
+    try {
+        let url = `http://localhost:2345/asc`;
+        let response = await fetch(url);
+        let res = await response.json();
+        console.log(res);
+       document.getElementById("container").innerHTML="";
+        data(res);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+showF();
+}
+
+
+   </script>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       body{
+        margin: 0px;
+        padding: 0px;
+    }
+    #navbar{
+        display: flex;
+    }
+    #navbar div:nth-child(1){
+        width: 74px;
+        height: 29px;
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        margin-left: 170px;
+        cursor: pointer;
+    }
+    #navbar div:nth-child(2){
+        width: 50px;
+        height: 29px;
+        /* background-color: #f2f2f2; */
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        cursor: pointer;
+        margin-left: 9px;
+        background-color: #f2f2f2;
+    }
+    #navbar div:nth-child(3){
+        width: 48px;
+        height: 29px;
+        /* background-color: #f2f2f2; */
+        font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        text-align: center;
+        padding-top: 15px;
+        cursor: pointer;
+        margin-left: 9px;
+    }
+    #navbar div:nth-child(4){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 545px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(5){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(6){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    #navbar div:nth-child(8){
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        cursor: pointer;
+        margin-left: 24px;
+        margin-top: 22px;
+    }
+    .heartN{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .heartN:hover{
+        background: url("https://cdn.iconscout.com/icon/free/png-64/heart-love-like-favorite-46263.png") no-repeat;
+        background-size: 15px 15px;
+    }
+    .sizeN{
+        height: 15px;
+        width: 15px;
+        cursor: pointer;
+        margin-left: 5px;
+        margin-top: 21px;
+    }
+    #mytheresa{
+      height: 36.36px;
+      width: 293px;
+      margin-left: 615px;
+      margin-top: 50px;
+    }
+    #sbag{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;  
+       margin-top: -25px;
+       margin-left: 1200px;
+    }
+    #bagTxt{
+        position: relative;
+    }
+    #bag{
+        height: 36px;
+        width: 36px;
+        margin-top: -40px;
+        margin-left: 1317px;
+    }
+    .count{
+        position: absolute;
+        margin-left: -22px;
+        bottom: 5px;
+    }
+    #categories{
+        display: flex;
+        margin-top: 40px;
+    }
+    #newArri{
+        font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       color: gray;
+       margin-left: 170px;
+    }
+   .marginSize{
+       font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       color: gray;
+       margin-left: 20px;
+   }
+   #search{
+       border: 1px solid gainsboro;
+       margin-left: 195px;
+       width: 230px;
+       padding: 6px 10px 6px 10px;
+   }
+   #fullLine{
+        height: 1.2px;
+        width: 100%;
+        background-color: #ebebeb;
+        margin-top: 9px;
+        margin-bottom: 48px;
+   }
+
+#arrival{
+    display: none;
+    position: absolute;
+    width: 1180px;
+    margin-left: 170px;
+    /* border: 1px solid red; */
+    height: 445px;
+    margin-top: -49px;
+}
+#smokeStrip{
+    background-color: #f2f2f2;
+    height: 33px;
+    width: 100%;
+    padding-top: 15px;
+}
+#smokeStrip span:nth-child(1) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 25px;
+       
+}
+#smokeStrip span:nth-child(2) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 190px;
+}
+#inn{
+    display: flex;
+    background-color: white;
+    height: 396px;
+}
+#inn>div>ul{
+    list-style-type: none;
+}
+#inn div:nth-child(1) {
+    margin-left: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn div:nth-child(2) {
+    margin-left: 102px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+.space{
+    margin-top: 13px;
+}
+#whiwomen{
+    margin-left: 120px;
+}
+
+
+#designerC{
+    display: none;
+    position: absolute;
+    width: 1180px;
+    margin-left: 170px;
+    /* border: 1px solid red; */
+    height: 445px;
+    margin-top: -49px;
+}
+#smokeStrip1{
+    background-color: #f2f2f2;
+    height: 33px;
+    width: 100%;
+    padding-top: 15px;
+}
+#smokeStrip1 span:nth-child(1) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 25px;
+       
+}
+#smokeStrip1 span:nth-child(2) {
+    font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13.5px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       /* color: gray; */
+       margin-left: 430px;
+}
+#inn1{
+    display: flex;
+    background-color: white;
+    height: 396px;
+}
+#inn1>div>ul{
+    list-style-type: none;
+}
+#inn1 div:nth-child(1) {
+    margin-left: -15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn1 div:nth-child(2) {
+    margin-left: 58px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#inn1 div:nth-child(3) {
+    margin-left: 102px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 14px;
+    color: grey;
+    margin-top: 3px;
+}
+#sunglass{
+    margin-left: 120px;
+}
+
+
+
+
+
+
+
+
+
+  #sign{
+      display: flex;
+  }  
+</style>
+<body>
+    
+
+    <div>
+        <div id="sign">
+            <p>CREATE AN ACCOUNT</p>
+            <input placeholder="acaademic title"><br><br>
+<input placeholder="first name *"><br><br>
+<input placeholder="last name *"><br><br>
+<input placeholder="email address *"><br><br>
+<input placeholder="password *"><br><br>
+<input placeholder="confirm password *">
+        </div>
+        <div>
+            <p>ALREADY REGISTERED</p>   
+        </div>
+    </div>
+
+
+</body>
+</html>

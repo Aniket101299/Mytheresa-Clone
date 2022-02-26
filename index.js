@@ -44,7 +44,6 @@ const ViewAllMensSchema = new mongoose.Schema(
     price: { type: Number, required: true },
     size: { type: String, required: true },
     color: {type: String,required: true},
-    // [] ,
     img: { type: String, required: true },
     Hoverimg: { type: String, required: true },
   },
@@ -57,15 +56,16 @@ const ViewAllMensSchema = new mongoose.Schema(
 // step 3 - Model
 const ViewMen = mongoose.model("ViewAllMen", ViewAllMensSchema); // post => posts
 
-// ------------------ COMMENT MODEL ----------------------------------------------------
-const commentSchema = new mongoose.Schema(
+// ------------------ KIDS MODEL ----------------------------------------------------
+const kidsSchema = new mongoose.Schema(
   {
-    content: { type: String, required: true },
-    post_id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "post",
-      required: true,
-    },
+    brand:{type: String, required: true},
+    title: { type: String, required: true },
+    price: { type: Number, required: true },
+    size: { type: String, required: true },
+    color: {type: String,required: true},
+    img: { type: String, required: true },
+    Hoverimg: { type: String, required: true },
   },
   {
     versionKey: false, // removed __v
@@ -73,7 +73,7 @@ const commentSchema = new mongoose.Schema(
   }
 );
 
-const Comment = mongoose.model("comment", commentSchema); // comment => comments
+const Kid = mongoose.model("Kid", kidsSchema); // comment => comments
 
 // ------------------ TAG MODEL ----------------------------------------------------
 const tagSchema = new mongoose.Schema(
@@ -176,57 +176,57 @@ app.delete("/users/:id", async (req, res) => {
 */
 
 // ----------------------------- TAG CRUD -----------------------------------
-app.post("/tags", async (req, res) => {
-  try {
-    const tag = await Tag.create(req.body);
+// app.post("/tags", async (req, res) => {
+//   try {
+//     const tag = await Tag.create(req.body);
 
-    return res.send(tag);
-  } catch (err) {
-    return res.status(500).send(err.message);
-  }
-});
+//     return res.send(tag);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
-app.get("/tags", async (req, res) => {
-  try {
-    const tags = await Tag.find().lean().exec();
+// app.get("/tags", async (req, res) => {
+//   try {
+//     const tags = await Tag.find().lean().exec();
 
-    return res.send(tags);
-  } catch (err) {
-    return res.status(500).send(err.message);
-  }
-});
+//     return res.send(tags);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
-app.get("/tags/:id", async (req, res) => {
-  try {
-    const tag = await Tag.findById(req.params.id).lean().exec();
+// app.get("/tags/:id", async (req, res) => {
+//   try {
+//     const tag = await Tag.findById(req.params.id).lean().exec();
 
-    return res.send(tag);
-  } catch (err) {
-    return res.status(500).send(err.message);
-  }
-});
+//     return res.send(tag);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
-app.patch("/tags/:id", async (req, res) => {
-  try {
-    const tag = await Tag.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+// app.patch("/tags/:id", async (req, res) => {
+//   try {
+//     const tag = await Tag.findByIdAndUpdate(req.params.id, req.body, {
+//       new: true,
+//     });
 
-    return res.send(tag);
-  } catch (err) {
-    return res.status(500).send(err.message);
-  }
-});
+//     return res.send(tag);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
-app.delete("/tags/:id", async (req, res) => {
-  try {
-    const tag = await Tag.findByIdAndDelete(req.params.id);
+// app.delete("/tags/:id", async (req, res) => {
+//   try {
+//     const tag = await Tag.findByIdAndDelete(req.params.id);
 
-    return res.send(tag);
-  } catch (err) {
-    return res.status(500).send(err.message);
-  }
-});
+//     return res.send(tag);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
 /*
   work with posts collection
@@ -345,70 +345,207 @@ app.delete("/viewmen/:id", async (req, res) => {
   DELETE SINGLE ITEM => delete /comments/:id
 */
 
-// ----------------------------- COMMENT CRUD -----------------------------------
-app.get("/comments", async (req, res) => {
-  try {
-    const comments = await Comment.find()
-      .populate({
-        path: "post_id",
-        select: ["title", "body"],
-        populate: [
-          { path: "user_id", select: ["first_name", "last_name"] },
-          { path: "tag_ids", select: ["name"] },
-        ],
-      })
-      .lean()
-      .exec();
+// ----------------------------- KIDS CRUD -----------------------------------
 
-    return res.send(comments);
+
+app.get("/kid", async (req, res) => {
+  try {
+    let kids;
+    let filter = {};
+    if(req.query.size) {
+      filter.size = req.query.size;
+    //  kids = await ViewMen.find({size:req.query.size}).lean().exec();
+    } 
+    if(req.query.color) {
+      filter.color = req.query.color;
+      // kids = await ViewMen.find({size:req.query.color}).lean().exec();
+    } 
+    if(filter == {}) {
+      kids = await Kid.find().lean().exec();
+    } else {
+      kids = await Kid.find(filter).lean().exec();
+    }
+    
+    return res.send(kids);
   } catch (err) {
     return res.status(500).send(err.message);
   }
 });
 
-app.post("/comments", async (req, res) => {
+app.get("/kidasc", async (req, res) => {
   try {
-    const comment = await Comment.create(req.body);
+    const kids = await Kid.find().sort({price:1}).lean().exec();
 
-    return res.send(comment);
+    return res.send(kids);
   } catch (err) {
     return res.status(500).send(err.message);
   }
 });
 
-app.get("/comments/:id", async (req, res) => {
+app.get("/kiddec", async (req, res) => {
   try {
-    const comment = await Comment.findById(req.params.id).lean().exec();
+    const kids = await Kid.find().sort({price:-1}).lean().exec();
 
-    return res.send(comment);
+    return res.send(kids);
   } catch (err) {
     return res.status(500).send(err.message);
   }
 });
 
-app.patch("/comments/:id", async (req, res) => {
+// app.get("/viewmen", async (req, res) => {
+//   try {
+//     const ViewAllMens = await ViewMen.find().lean().exec();
+
+//     return res.send(ViewAllMens);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
+
+app.post("/kid", async (req, res) => {
   try {
-    const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
+    const kids = await Kid.create(req.body);
+
+    return res.send(kids);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+app.get("/kid/:id", async (req, res) => {
+  try {
+    const kids = await Kid.findById(req.params.id).lean().exec();
+
+    return res.send(kids);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+app.patch("/kid/:id", async (req, res) => {
+  try {
+    const kids = await Kid.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
 
-    return res.send(comment);
+    return res.send(kids);
   } catch (err) {
     return res.status(500).send(err.message);
   }
 });
 
-app.delete("/comments/:id", async (req, res) => {
+app.delete("/kid/:id", async (req, res) => {
   try {
-    const comment = await Comment.findByIdAndDelete(req.params.id)
-      .lean()
-      .exec();
+    const kids = await Kid.findByIdAndDelete(req.params.id).lean().exec();
 
-    return res.send(comment);
+    return res.send(kids);
   } catch (err) {
     return res.status(500).send(err.message);
   }
 });
+
+/*
+  work with comments collection
+  GET => get /comments
+  POST => post /comments
+  GET SINGLE ITEM => get /comments/:id
+  UPDATE SINGLE ITEM => patch /comments/:id
+  DELETE SINGLE ITEM => delete /comments/:id
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// app.get("/comments", async (req, res) => {
+//   try {
+//     const comments = await Comment.find()
+//       .populate({
+//         path: "post_id",
+//         select: ["title", "body"],
+//         populate: [
+//           { path: "user_id", select: ["first_name", "last_name"] },
+//           { path: "tag_ids", select: ["name"] },
+//         ],
+//       })
+//       .lean()
+//       .exec();
+
+//     return res.send(comments);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
+
+// app.post("/comments", async (req, res) => {
+//   try {
+//     const comment = await Comment.create(req.body);
+
+//     return res.send(comment);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
+
+// app.get("/comments/:id", async (req, res) => {
+//   try {
+//     const comment = await Comment.findById(req.params.id).lean().exec();
+
+//     return res.send(comment);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
+
+// app.patch("/comments/:id", async (req, res) => {
+//   try {
+//     const comment = await Comment.findByIdAndUpdate(req.params.id, req.body, {
+//       new: true,
+//     });
+
+//     return res.send(comment);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
+
+// app.delete("/comments/:id", async (req, res) => {
+//   try {
+//     const comment = await Comment.findByIdAndDelete(req.params.id)
+//       .lean()
+//       .exec();
+
+//     return res.send(comment);
+//   } catch (err) {
+//     return res.status(500).send(err.message);
+//   }
+// });
 
 app.listen(2345, async function () {
   try {

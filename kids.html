@@ -376,8 +376,24 @@
     height: 100%;
     margin-left: 2%;
 }
+#kd{
+    text-align: center;
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    font-weight: 400px;
+    margin-top: 40px;
+}
 
-
+#kidImgs{
+    display: flex;
+    margin-left: 320px;
+    width: 900px;
+    /* border: 1px solid red; */
+}
+.gap{
+    margin-left: 20px;
+}
 
 
 
@@ -987,9 +1003,15 @@
 </div>
 
 
+<p id="kd">KIDS DESIGNERS</p>
 
-
-
+<div id="kidImgs">
+    <div> <img width="162px" height="205px" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/12_Kids/carousel_home/SS22/Crosslink-Carousel_Gucci_1x_20211230095423.jpg"> </div>
+    <div id="moncler" class="gap"> <img width="162px" height="205px" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/12_Kids/carousel_home/SS22/Crosslink-Carousel_Moncler-Enfant_1x_20211230095425.jpg"> </div>
+    <div class="gap"> <img width="162px" height="205px" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/12_Kids/carousel_home/SS22/Crosslink-Carousel_self-portrait_1x_20211230095426.jpg"> </div>
+    <div class="gap"> <img width="162px" height="205px" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/12_Kids/carousel_home/SS22/Crosslink-Carousel_burberry-kids_1x_20211230095419.jpg"> </div>
+    <div class="gap"> <img width="162px" height="205px" src="https://img.mytheresa.com/media/static/raw/cms/l/SM_Monetate_Images/12_Kids/carousel_home/SS22/Crosslink-Carousel_MM6_1x_20211230095426.jpg"> </div>
+</div>
 
 
 
@@ -1264,5 +1286,9 @@ document.getElementById("women").addEventListener("click",function() {
  document.getElementById("men").style.backgroundColor="white";
  document.getElementById("kids").style.backgroundColor="#f2f2f2"; 
  window.location.href="kids.html";
+ })
+
+ document.getElementById("moncler").addEventListener("click",function () {
+    window.location.href="kidsProduct.html";  
  })
 </script>

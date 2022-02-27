@@ -66,6 +66,8 @@ const kidsSchema = new mongoose.Schema(
     color: {type: String,required: true},
     img: { type: String, required: true },
     Hoverimg: { type: String, required: true },
+    category:{type:String, required:false},
+    pattern:{type:String, required:false}
   },
   {
     versionKey: false, // removed __v
@@ -359,7 +361,13 @@ app.get("/kid", async (req, res) => {
     if(req.query.color) {
       filter.color = req.query.color;
       // kids = await ViewMen.find({size:req.query.color}).lean().exec();
+    }
+    if(req.query.category) {
+      filter.category = req.query.category;
     } 
+    if(req.query.pattern) {
+      filter.pattern = req.query.pattern;
+    }
     if(filter == {}) {
       kids = await Kid.find().lean().exec();
     } else {

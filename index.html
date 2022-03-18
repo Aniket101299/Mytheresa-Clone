@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script
-      src="https://kit.fontawesome.com/938dcf5404.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="https://kit.fontawesome.com/8680ca36fa.js" crossorigin="anonymous"></script>
-    <style>
+</head>
 
-body{
+<style>
+    body{
         margin: 0px;
         padding: 0px;
     }
     #navbar{
         display: flex;
     }
+   
     #navbar div:nth-child(1){
         width: 74px;
         height: 29px;
+        background-color: #f2f2f2;
         font-family: Futura-Medium, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
         font-size: 13px;
         font-weight: 400;
@@ -43,7 +42,6 @@ body{
         padding-top: 15px;
         cursor: pointer;
         margin-left: 9px;
-        background-color: #f2f2f2;
     }
     #navbar div:nth-child(3){
         width: 48px;
@@ -75,6 +73,9 @@ body{
         cursor: pointer;
         margin-left: 24px;
         margin-top: 22px;
+    }
+    #acc a{
+        text-decoration: none;
     }
     #navbar div:nth-child(6){
         font-family: Arial, Helvetica, sans-serif;
@@ -116,6 +117,7 @@ body{
       margin-top: 50px;
     }
     #sbag{
+        cursor: pointer;
        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
        font-size: 13.5px;
        font-weight: 400;
@@ -123,39 +125,94 @@ body{
        margin-top: -25px;
        margin-left: 1200px;
     }
+    #sbag a{
+        text-decoration: none;
+    }
     #bagTxt{
         position: relative;
     }
     #bag{
+        cursor: pointer;
+        margin-top: -30px;
+    }
+    #bag img{
         height: 36px;
         width: 36px;
-        margin-top: -40px;
-        margin-left: 1317px;
+        margin-left: 1315px;
     }
     .count{
         position: absolute;
-        margin-left: -22px;
-        bottom: 5px;
+        margin-left: 1329px;
+        bottom: 6.4px;
     }
     #categories{
         display: flex;
-        margin-top: 40px;
+        /* gap: 10px; */
+        /* width: 1300px; */
+        margin-top: 22px;
+        /* border: 1px solid blue; */
+        /* padding-top: 15px;
+        padding-bottom: 20px; */
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        margin-left: 153px;
     }
-    #newArri{
+
+    /* .newArri{
         font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
        font-size: 13px;
        font-weight: 400;
        letter-spacing: 0.5px;
        color: gray;
        margin-left: 170px;
+    } */
+    /* .outNew{
+        position: relative;
+        border: 1px solid red;
+        height: 50px;
+      
+    } */
+    .hover{
+        /* background-color: yellow; */
+        cursor: pointer;
+        padding-bottom: 20px;
+        padding-top: 15px;
     }
-   .marginSize{
+    .hover a{
+        font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
+       font-size: 13px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       color: gray;
+       margin-left: 16px;
+       text-decoration: none;
+       word-spacing:0px;
+       /* border: 1px solid red; */
+    }
+     /* .outNew a{
+       margin-left: 170px;
+       width: 150px;
+    }  */
+    .hover:hover .arrival{
+        display: block;
+    }
+    .hover:hover .designerC{
+        display: block;
+    }
+   /* .marginSize{
        font-family: Futura,Century Gothic,Gill Sans,Helvetica,Arial,sans-serif;
        font-size: 13px;
        font-weight: 400;
        letter-spacing: 0.5px;
        color: gray;
        margin-left: 20px;
+   } */
+   #searchBox{
+       margin-left: 905px;
+       margin-top: -45px;
+       position: absolute;
+       z-index: 1;
    }
    #search{
        border: 1px solid gainsboro;
@@ -163,22 +220,35 @@ body{
        width: 230px;
        padding: 6px 10px 6px 10px;
    }
+   #search:focus{
+    outline: none;
+    background-color:#fdf8fd;
+   }
+   #searchImg{
+       margin-left: 414px;
+       width: 27px;
+       margin-top: -27px;
+   }
    #fullLine{
         height: 1.2px;
         width: 100%;
         background-color: #ebebeb;
-        margin-top: 9px;
+        margin-top: 0px;
         margin-bottom: 48px;
+        position: sticky;
+        top: 57px;
    }
 
-#arrival{
+.arrival{
     display: none;
     position: absolute;
     width: 1180px;
-    margin-left: 170px;
+    margin-left: 17px;
     /* border: 1px solid red; */
     height: 445px;
-    margin-top: -49px;
+    /* margin-top: -49px; */
+    margin-top: 20px;
+    z-index: 1;
 }
 #smokeStrip{
     background-color: #f2f2f2;
@@ -207,12 +277,14 @@ body{
     display: flex;
     background-color: white;
     height: 396px;
+    border-left: 1px solid gainsboro;
 }
 #inn>div>ul{
     list-style-type: none;
 }
 #inn div:nth-child(1) {
-    margin-left: -15px;
+    margin-left: 15px;
+    width: 130px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -221,8 +293,11 @@ body{
     color: grey;
     margin-top: 3px;
 }
+#inn div:nth-child(1) ul{
+    margin-left: -35px;
+}
 #inn div:nth-child(2) {
-    margin-left: 102px;
+    width: 280px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -230,6 +305,9 @@ body{
     line-height: 14px;
     color: grey;
     margin-top: 3px;
+}
+#inn div:nth-child(2) ul{
+    margin-left: 80px;
 }
 .space{
     margin-top: 13px;
@@ -239,14 +317,14 @@ body{
 }
 
 
-#designerC{
+.designerC{
     display: none;
     position: absolute;
     width: 1180px;
-    margin-left: 170px;
+    margin-left: -97px;
     /* border: 1px solid red; */
     height: 445px;
-    margin-top: -49px;
+    margin-top: 20px;
 }
 #smokeStrip1{
     background-color: #f2f2f2;
@@ -275,12 +353,13 @@ body{
     display: flex;
     background-color: white;
     height: 396px;
+    border-left: 1px solid gainsboro;
 }
 #inn1>div>ul{
     list-style-type: none;
 }
 #inn1 div:nth-child(1) {
-    margin-left: -15px;
+    width: 170px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -288,9 +367,12 @@ body{
     line-height: 14px;
     color: grey;
     margin-top: 3px;
+}
+#inn1 div:nth-child(1) ul{
+    margin-left: -17px;
 }
 #inn1 div:nth-child(2) {
-    margin-left: 58px;
+    width: 260px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -298,9 +380,12 @@ body{
     line-height: 14px;
     color: grey;
     margin-top: 3px;
+}
+#inn1 div:nth-child(2) ul{
+    margin-left: 60px;
 }
 #inn1 div:nth-child(3) {
-    margin-left: 102px;
+    width: 220px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -309,8 +394,11 @@ body{
     color: grey;
     margin-top: 3px;
 }
+#inn1 div:nth-child(3) ul{
+    margin-left: 30px;
+}
 #sunglass{
-    margin-left: 120px;
+    margin-left: 79px;
 }
 
 
@@ -318,233 +406,432 @@ body{
 
 
 
+   #FImg{
+       margin-left: 170px;
+   }
+   #narr{
+       background-color: #f2f2f2;
+       width: 77.7%;
+       height: 250px;
+       border-top: 1px solid gainsboro;
+       border-bottom: 1px solid gainsboro;
+       margin-left: 170px;
+       margin-top: 32px;
+   }
+   #narr div:nth-child(1) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px;
+       text-align: center;
+       margin-top: 40px;
+   }
+   #narr div:nth-child(2) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       line-height:44.2px;
+       letter-spacing: -0.34px;
+       text-align: center;
+       margin-top: 8px;
+   }
+   #narr div:nth-child(3) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       line-height:22px;
+       letter-spacing: -0.16px;
+       text-align: center;
+       margin-top: 20px;
+   }
+   #narr button{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 527px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 30px;
+   }
+   #skiThe{
+   display: flex;
+   }
+   #skiThe div:nth-child(1) p:nth-child(1) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       margin-left: 370px;
+       margin-top: 40px;
+   }
+   #skiThe div:nth-child(1) p:nth-child(2) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       margin-left:280px;
+       margin-top: -10px;
+   }
+   #skiThe div:nth-child(1) p:nth-child(3) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       margin-left:370px;
+       margin-top: -35px;
+   }
+  
+   #skiThe div:nth-child(2) p:nth-child(1) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px;
+       text-align: center; 
+       margin-left: 245px;
+       margin-top: 40px;
+   }
+   #skiThe div:nth-child(2) p:nth-child(2) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       margin-left: 245px;
+       margin-top: -7px;
+   }
+   #skiThe div:nth-child(2) p:nth-child(3) {
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       margin-left: 260px;
+       margin-top: -33px;
+   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      body {
-        /* background-color: black; */
-        padding: 0;
-        margin: 0;
-      }
-      #redstrip {
+  #imgD{
+      display: flex;
+      margin-left: 170px;
+      width:77.3%;
+  }
+  #imgD div:nth-child(2){
+    margin-left: 20px;
+  }
+  #shopNow2{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
+  #li{
+       height: 1.3px;
         width: 100%;
-        height: 20px;
-        background-color: #ff0000;
-        color: #ffffff;
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        font-size: 11.8px;
-        font-weight: 700;
-        line-height: 16.52px;
-        text-decoration: none solid rgb(255, 255, 255);
-        vertical-align: baseline;
-        letter-spacing: normal;
-        word-spacing: 0px;
-        margin: 0px;
-        padding-top: 6px;
-        font-style: normal;
-        font-variant: normal;
-      }
-      #blackStrip {
-        width: 100%;
-        height: 80px;
-        background-color: black;
-        display: flex;
-      }
-      #boat {
-        width: 100px;
-        height: 45px;
-        margin-left: 70px;
-        margin-top: 20px;
-      }
-      #nav {
-        width: 500px;
-        height: 35px;
-        /* border: 1px solid yellow; */
-        color: white;
-        margin-top: 25px;
-        margin-left: 360px;
-        display: flex;
-      }
-      #shop {
-        font-family: Montserrat, sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-      }
-      .down {
-        margin-top: 9px;
-        margin-left: 5px;
-      }
-      .mlt {
-        margin-left: 10px;
-        font-family: Montserrat, sans-serif;
-        font-size: 15px;
-        margin-top: 8px;
-      }
-      .line {
-        height: 22px;
-        display: inline-block;
-        border: 0.5px solid red;
-        margin-left: 13px;
-        margin-top: 3px;
-      }
-      #search {
-        width: 245px;
-        height: 41px;
-        background-color: white;
-        border-radius: 50px;
-        margin-left: 40px;
-        margin-top: 17px;
-        display: flex;
-        font-size: 17px;
-        font-family: sans-serif;
-        color: black;
-        font-weight: 500;
-      }
-      /* .search {
-        color: red;
-        font-size: 14px;
-      } */
-      #gift {
-        width: 20px;
-        height: 20px;
-        margin-top: 30px;
-        margin-left: 30px;
-      }
-      #man {
-        width: 20px;
-        height: 20px;
-        margin-top: 30px;
-        margin-left: 12px;
-      }
-      #cartimg {
-        width: 20px;
-        height: 20px;
-        margin-top: 30px;
-        margin-left: 12px;
-      }
-      #title {
-        color: white;
-        text-align: center;
-        font-family: Montserrat, sans-serif;
-        font-size: 50px;
-        font-weight: 600;
-      }
-      #whiteBox {
-        width: 100%;
-        height: 700px;
-        background-color: white;
-        border: 1px solid white;
-        /* padding-top: 18px; */
-      }
-      #container {
-        height: 500px;
-        width: 450px;
-        /* border: 1px solid gray; */
-        margin: auto;
-        margin-top: 5px;
-      }
-      #heading {
-        font-family: sans-serif;
-        font-size: 29.3333px;
-        font-weight: 600;
-        text-align: center;
+        background-color: #ebebeb;
         margin-top: 40px;
-      }
-      .ml {
-        margin-left: 20px;
-        margin-top: 20px;
-      }
-      .size {
-        width: 83.8%;
-        /* height: 25px; */
-        margin-top: 10px;
-        margin-bottom: 25px;
-        padding: 11px 15px;
-        border: 1px solid gray;
-        vertical-align: middle;
-        font-size: 16px;
-      }
-      button {
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 11px 25px;
-        width: 410px;
-        margin-left: 20px;
-        font-family: Montserrat, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      #alAcc{
-        cursor: pointer;
-      }
-      #car{
-        cursor: pointer;
-      }
-      #existingAcc {
-        display: flex;
-        margin-left: 20px;
-        color: black;
-        font-family: Montserrat, sans-serif;
-        font-size: 17px;
-        font-weight: 700;
+  }
+  #flat{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px;
+       text-align: center;
+       margin-top: 30px;
+  }
+  #step{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height: 44.2px;
+       text-align: center;
+       margin-top: -6px;
+  }
+  #new{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height: 44.2px;
+       text-align: center;
+       margin-top: -32px;
+       margin-bottom: 47px;
+  }
+  #shopNow3{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
+  #shopNow4{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
 
-        word-spacing: 0px;
-        margin-top: 20px;
-      }
-      .dimension {
-        font-family: sans-serif;
-        font-size: 17px;
-      }
-      #fg{
-        display: flex;
-        justify-content: center;
-        /* border: 1px solid red; */
-        margin-top: 30px;
-      } 
-      #f{
-        width: 60px;
-        height: 60px;
-        /* border: 1px solid red; */
-      }   
-      #g{
-        width: 41px;
-        height: 41px;
-        margin-top: 12px;
-        /* border: 1px solid red; */
-      }
-      #or {
-        margin: 0px 4px 0px 4px;
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
+  .l{
+        height: 1.8px;
+        width: 78%;
+        margin-left: 160px;
+        background-color: #ebebeb;
+        margin-top: 50px;
+  }
+  #ibag{
+      display: flex;
+      width: 77.7%;
+      height: 1190px;
+      margin-left: 170px;
+      /* border: 1px solid red; */
+  }
+  #cbagEar{
+      /* border: 1px solid green; */
+      width: 49%;
+      height: 100%;
+  }
+  #pinkBa{
+      /* border: 1px solid green; */
+      width: 49%;
+      height: 100%;
+      margin-left: 20px;
+  }
+  #cbagEar p:nth-child(1){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 30px;
+  }
+  #cbagEar p:nth-child(2){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -5px;
+  }
+  #cbagEar p:nth-child(3){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -35px;
+  }
+  #shopNow5{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
+ #earLine{
+        height: 1.8px;
+        width: 100%;
+        background-color: gainsboro;
+        margin-top: 40px;
+ }
+ #et1{
+      font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 30px;
+ }
+ #et2{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -5px;
+ }
+ #et3{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -30px;
+       margin-bottom: 48px;
+ }
+ #shopNow6{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
+ 
+  #pinkBa p:nth-child(1){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 30px;
+  }
+  #pinkBa p:nth-child(2){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -5px;
+  }
+  #pinkBa p:nth-child(3){
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -35px;
+  }
+  #shopNow7{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 230px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 35px;
+  }
+#sue{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 40px;  
+}
+#how{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: -0.34px;
+       line-height:44.2px;
+       text-align: center;
+       margin-top: -5px;
+}
+#inspired{
+    display: flex;
+      width: 77.3%;
+      height: 310px;
+      margin-left: 170px;
+      /* border: 1px solid red; */
+}
+#inspired div:nth-child(2) {
+    margin-left: 18px;
+}
+#inspired div:nth-child(3) {
+    margin-left: 18px;
+}
+#inspired div:nth-child(4) {
+    margin-left: 18px;
+}
+#val{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 7px;  
+}
+#sai{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 7px;  
+}
+#tom{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 7px;  
+}
+#lo{
+    font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 16px;
+       font-weight: 400;
+       letter-spacing: -0.16px; 
+       text-align: center;
+       margin-top: 7px;  
+}
+#shopNow8{
+       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12.2px;
+       font-weight: 400;
+       line-height:22px;
+       text-align: center; 
+       background-color: black;
+       color: white;
+       margin-left: 700px;
+       width: 120px;
+       padding: 4px 10px 4px 10px;
+       border: none;
+       margin-top: 25px;
+  }
 .insLine{
     height: 1.8px;
         width: 78%;
@@ -802,7 +1089,7 @@ body{
         background: url("https://cdn.iconscout.com/icon/free/png-64/heart-love-like-favorite-46263.png") no-repeat;
         background-size: 15px 15px;
     }
-    .sized{
+    .size{
         height: 15px;
         width: 15px;
         cursor: pointer;
@@ -817,7 +1104,7 @@ body{
         padding-top: 6px;
         cursor: pointer;
     }
-    .mli{
+    .ml{
         margin-left: 10px;
     }
     .mlc{
@@ -971,48 +1258,37 @@ body{
         cursor: pointer;
     }
    
+</style>
 
-    </style>
-  </head>
-  <body>
+<body>
+   
+<div id="navbar">
+    <div id="women">WOMEN</div>
+    <div id="men">MEN</div>
+    <div id="kids">KIDS</div>
+    <div id="sign">Signup for Newsletter</div>
+    <div id="acc"> <a href="login.html">My account</a> </div>
+    <div id="wishlist">My wishlist</div>
+    <div class="heartN sizeN"></div> 
+    <div id="india">India|English</div>
+</div>
 
-    <div id="navbar">
-        <div id="women">WOMEN</div>
-        <div id="men">MEN</div>
-        <div id="kids">KIDS</div>
-        <div id="sign">Signup for Newsletter</div>
-        <div id="acc">My account </div>
-        <div id="wishlist">My wishlist</div>
-        <div class="heartN sizeN"></div> 
-        <div id="india">India|English</div>
-    </div>
-    
-    <img id="mytheresa" src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220201T173402">
-    <div id="sbag">SHOPPING BAG</div>
-    <div id="bagTxt"> 
-    <span> <img id="bag" src="https://cdn.iconscout.com/icon/free/png-64/shopping-bag-2127590-1792575.png"> </span>
-    <span class="count">0</span>
-    </div>
-    
-    
-    <div id="categories">
-        <div id="newArri">NEW ARRIVALS</div>
-        <div class="marginSize" id="designer">DESIGNERS</div>
-        <div class="marginSize" id="clothing">CLOTHING</div>
-        <div class="marginSize" id="shoes">SHOES</div>
-        <div class="marginSize" id="bags">BAGS</div>
-        <div class="marginSize" id="accesories">ACCESSORIES</div>
-        <div class="marginSize" id="jewellery">JEWELRY</div>
-        <div class="marginSize" id="vacation">VACATION</div>
-        <div class="marginSize" id="sale">SALE</div>
-        <input id="search" placeholder="Search for...">
-    </div>
-    
-    <div id="fullLine"></div>
-    
-    <!-- ------------------------------- hover categories ------------------------------------- -->
-    
-    <div id="arrival">
+<img id="mytheresa" src="https://www.mytheresa.com/skin/frontend/mytheresa/default/images/logo.png?v=20220201T173402">
+<div id="sbag"> <a href="cart.html">SHOPPING BAG</a> </div>
+<div id="bagTxt"> 
+<div id="bag"> <a href="cart.html"> <img src="https://cdn.iconscout.com/icon/free/png-64/shopping-bag-2127590-1792575.png"> </a></div>
+<span class="count">0</span>
+</div>
+ 
+
+
+
+<div id="categories">
+    <div class="outNew hover"> 
+    <!-- <div class="newArri"> -->
+         <a href="newArrival.html">NEW ARRIVALS</a> 
+        <!-- </div>  -->
+    <div class="arrival">
         <div id="smokeStrip">
             <span>JUST IN</span>
             <span>DISCOVER</span>
@@ -1042,193 +1318,293 @@ body{
         </div>
         <div id="whiwomen"> <img width="678px" height="397px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_NA_Flyout_1414x940_2x_20220218101640.jpg"> </div>
     </div>
-    </div>
-    
-    
-    
-    <div id="designerC">
-        <div id="smokeStrip1">
-            <span>TOP 20</span>
-            <span>BRAND HIGHLIGHTS</span>
-        </div>
-    
-    <div id="inn1"> 
-        <div>
-            <ul>
-                <li>Acne Studios</li>
-                <li class="space">Alexander McQueen</li>
-                <li class="space">Balenciaga</li>
-                <li class="space">Bottega Veneta</li>
-                <li class="space">Brunello Cucinelli</li>
-                <li class="space">Burberry</li>
-                <li class="space">Chloe</li>
-                <li class="space">Dolce & Gabbana</li>
-                <li class="space">Fendi</li>
-                <li class="space">Gianvito Rossi</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>Golden Goose</li>
-                <li class="space">Gucci</li>
-                <li class="space">Isabel Marant</li>
-                <li class="space">Isabel Marant Etoile</li>
-                <li class="space">Jimmy Choo</li>
-                <li class="space">Loewe</li>
-                <li class="space">Maison Margiela</li>
-                <li class="space">Roger Vivier</li>
-                <li class="space">Saint Laurent</li>
-                <li class="space">Valentino</li>
-                <li class="space">Designers A-Z</li>
-                <li class="space">New Designers A-Z</li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>Christopher Esber</li>
-                <li class="space">Dior Eyewear</li>
-                <li class="space">Eera</li>
-                <li class="space">Eres</li>
-                <li class="space">Gia Borghini</li>
-                <li class="space">Jacquemus</li>
-                <li class="space">Jil Sander</li>
-                <li class="space">Khaite</li>
-                <li class="space">Lemaire</li>
-                <li class="space">Nensi Dojaka</li>
-                <li class="space">Sir</li>
-                <li class="space">The Row</li>
-                <li class="space">Tom Ford</li>
-                <li class="space">Toteme</li>
-            </ul>
-        </div>
-        <div id="sunglass"> <img width="450px" height="396px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/Flyout_missdior-2x_20220222111604.jpg"> </div>
-    </div>
+    </div> 
     </div>
 
-
-<!-- -------------------- header end ----------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div id="redstrip">
-      GET FLAT 15% SITEWIDE* | CASH ON DELIVERY IS NOW LIVE
+    <div class="hover">
+        <a href="newArrival.html">DESIGNERS</a> 
+        <div class="designerC">
+    <div id="smokeStrip1">
+        <span>TOP 20</span>
+        <span>BRAND HIGHLIGHTS</span>
     </div>
 
-    <div id="blackStrip">
-      <img
-        id="boat"
-        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Boat-Logo_200x.png?v=1600753267"
-      />
-
-      <div id="nav">
-        <div id="shop" class="mlt">Shop</div>
-        <i class="down fas fa-angle-down"></i>
-        <div class="line"></div>
-        <div class="mlt">Flat 15% off</div>
-        <div class="line"></div>
-        <div class="mlt">Plug-In Sale</div>
-        <div class="line"></div>
-        <div class="mlt">More</div>
-        <i class="down fas fa-angle-down"></i>
-      </div>
-
-      <i class="search fas fa-search"></i>
-      <input type="text" id="search" placeholder="        Search..." />
-      <img
-        id="gift"
-        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/gift.png?v=1606314809"
-      />
-      <img
-        id="man"
-        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/user_1.png?v=1606314823"
-      />
-      <img
-        id="cartimg"
-        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/cart.png?v=1606314839"
-      />
+<div id="inn1"> 
+    <div>
+        <ul>
+            <li>Acne Studios</li>
+            <li class="space">Alexander McQueen</li>
+            <li class="space">Balenciaga</li>
+            <li class="space">Bottega Veneta</li>
+            <li class="space">Brunello Cucinelli</li>
+            <li class="space">Burberry</li>
+            <li class="space">Chloe</li>
+            <li class="space">Dolce & Gabbana</li>
+            <li class="space">Fendi</li>
+            <li class="space">Gianvito Rossi</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Golden Goose</li>
+            <li class="space">Gucci</li>
+            <li class="space">Isabel Marant</li>
+            <li class="space">Isabel Marant Etoile</li>
+            <li class="space">Jimmy Choo</li>
+            <li class="space">Loewe</li>
+            <li class="space">Maison Margiela</li>
+            <li class="space">Roger Vivier</li>
+            <li class="space">Saint Laurent</li>
+            <li class="space">Valentino</li>
+            <li class="space">Designers A-Z</li>
+            <li class="space">New Designers A-Z</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Christopher Esber</li>
+            <li class="space">Dior Eyewear</li>
+            <li class="space">Eera</li>
+            <li class="space">Eres</li>
+            <li class="space">Gia Borghini</li>
+            <li class="space">Jacquemus</li>
+            <li class="space">Jil Sander</li>
+            <li class="space">Khaite</li>
+            <li class="space">Lemaire</li>
+            <li class="space">Nensi Dojaka</li>
+            <li class="space">Sir</li>
+            <li class="space">The Row</li>
+            <li class="space">Tom Ford</li>
+            <li class="space">Toteme</li>
+        </ul>
+    </div>
+    <div id="sunglass"> <img width="450px" height="396px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/Flyout_missdior-2x_20220222111604.jpg"> </div>
+</div>
+        </div>
+    </div>
+    <!-- <div class="marginSize" id="designer">DESIGNERS</div> -->
+    <div class="hover" id="clothing"> 
+         <a href="#">CLOTHING</a>
+    </div>
+    <div class="hover" id="shoes">
+        <a href="#">SHOES</a>
+    </div>
+    <div class="hover" id="bags">
+        <a href="#">BAGS</a>
+    </div>
+    <div class="hover" id="accesories">
+        <a href="#">ACCESSORIES</a>
+    </div>
+    <div class="hover" id="jewellery">
+        <a href="#">JEWELRY</a>
+    </div>
+    <!-- <div class="hover" id="vacation">
+        <a href="#">VACATION</a>
     </div> -->
+    <div class="hover" id="sale">
+        <a href="#">SALE</a>
+    </div>
+</div>
 
-    <div id="whiteBox">
-      <div id="heading">Create Account</div>
+<div id="searchBox">
+    <input id="search" placeholder="Search for...">
+    <div id="searchImg"> <img width="22px" height="22px" src="https://cdn.iconscout.com/icon/free/png-64/search-1436-527970.png">  </div>
+</div>
 
-      <div id="fg">
-        <div id="f">
-        <img
-          height="100%"
-          width="100%"
-          src="https://tse2.mm.bing.net/th?id=OIP.HDAO-9cSE21SuVjDtSYcwQAAAA&pid=Api&P=0&w=300&h=300"
-        />
-      </div>
-      <div id="g">
-        <img
-        height="100%"
-        width="100%"
-          src="https://www.clipartkey.com/mpngs/m/8-89999_google-clipart-full-hd-google-app-icon-png.png"
-        />
-      </div>
-      </div>
 
-      <div id="container">
-        <label class="ml dimension">First Name</label>
-        <br />
-        <input id="fname" type="text" class="ml size" />
-        <br />
-        <label class="ml dimension">Last Name</label>
-        <br />
-        <input id="lname" type="text" class="ml size" />
-        <br />
-        <label class="ml dimension">Email</label>
-        <br />
-        <input id="email" type="email" class="ml size" />
-        <br />
-        <label class="ml dimension">Password</label>
-        <br />
-        <input id="pass" type="password" class="ml size" />
-        <br />
-        <button>Create</button>
-        <div id="existingAcc">
-          <div id="alAcc">Log in with an existing account</div>
-          <div id="or">or</div>
-          <div id="car">Return to Store</div>
-        </div>
-      </div>
+<div id="fullLine"></div>
+
+<!-- ------------------------------- hover categories ------------------------------------- -->
+ <!-- <div class="arrival">
+    <div id="smokeStrip">
+        <span>JUST IN</span>
+        <span>DISCOVER</span>
     </div>
 
+<div id="inn"> 
+    <div>
+        <ul>
+            <li>This Week</li>
+            <li class="space">Previous Weeks</li>
+            <li class="space">Clothing</li>
+            <li class="space">Shoes</li>
+            <li class="space">Bags</li>
+            <li class="space">Accesories</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Cold Weather Edit</li>
+            <li class="space">The Ski Edit</li>
+            <li class="space">Essentials</li>
+            <li class="space">The Home Edit</li>
+            <li class="space">Wedding Guest</li>
+            <li class="space">Bridal</li>
+            <li class="space">Stories</li>
+        </ul>
+    </div>
+    <div id="whiwomen"> <img width="678px" height="397px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_NA_Flyout_1414x940_2x_20220218101640.jpg"> </div>
+</div>
+</div>  -->
+
+
+
+<!-- <div id="designerC">
+    <div id="smokeStrip1">
+        <span>TOP 20</span>
+        <span>BRAND HIGHLIGHTS</span>
+    </div>
+
+<div id="inn1"> 
+    <div>
+        <ul>
+            <li>Acne Studios</li>
+            <li class="space">Alexander McQueen</li>
+            <li class="space">Balenciaga</li>
+            <li class="space">Bottega Veneta</li>
+            <li class="space">Brunello Cucinelli</li>
+            <li class="space">Burberry</li>
+            <li class="space">Chloe</li>
+            <li class="space">Dolce & Gabbana</li>
+            <li class="space">Fendi</li>
+            <li class="space">Gianvito Rossi</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Golden Goose</li>
+            <li class="space">Gucci</li>
+            <li class="space">Isabel Marant</li>
+            <li class="space">Isabel Marant Etoile</li>
+            <li class="space">Jimmy Choo</li>
+            <li class="space">Loewe</li>
+            <li class="space">Maison Margiela</li>
+            <li class="space">Roger Vivier</li>
+            <li class="space">Saint Laurent</li>
+            <li class="space">Valentino</li>
+            <li class="space">Designers A-Z</li>
+            <li class="space">New Designers A-Z</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Christopher Esber</li>
+            <li class="space">Dior Eyewear</li>
+            <li class="space">Eera</li>
+            <li class="space">Eres</li>
+            <li class="space">Gia Borghini</li>
+            <li class="space">Jacquemus</li>
+            <li class="space">Jil Sander</li>
+            <li class="space">Khaite</li>
+            <li class="space">Lemaire</li>
+            <li class="space">Nensi Dojaka</li>
+            <li class="space">Sir</li>
+            <li class="space">The Row</li>
+            <li class="space">Tom Ford</li>
+            <li class="space">Toteme</li>
+        </ul>
+    </div>
+    <div id="sunglass"> <img width="450px" height="396px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/Flyout_missdior-2x_20220222111604.jpg"> </div>
+</div>
+</div> -->
 
 
 
 
+<img id="FImg" width="1180" height="535.34px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/The_Essentials_Edit_Hompage_Big_desktop_1_2x_20220221120944.jpg?imwidth=1180&imdensity=1">
+
+<div id="narr">
+    <div>DON'T MISS OUT</div>
+    <div>New arrivals</div>
+    <div>Helmut Lang, Isabel Marant, Bogner, Etro... </div>
+    <button id="shopNow1">SHOP  NOW  >></button>
+</div>
+
+
+<div id="skiThe">
+<div> 
+    <p>SALE - UP TO 50% OFF</p> 
+    <p>Ski and cold-weather</p>
+    <p>essentials</p>
+</div>
+<div>
+    <p>MISSDIOR SUNGLASSES</p>
+    <p>The Exclusive Pre-Launch</p>
+    <p>at Mytheresa and Dior</p>
+</div>
+</div>
 
 
 
+<div id="imgD">
+    <div> 
+        <img width="100%" height="930px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/ActboxTall-Ski_FW21_2x_20220221091728.jpg?imwidth=600&imdensity=1"> 
+        <button id="shopNow3">SHOP NOW >></button>
+    </div>
+    <div> 
+        <img width="100%" height="310px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/ActboxSmall-missdior-2x_20220221124721.jpg?imwidth=600&imdensity=1"> 
+        <button id="shopNow2">SHOP NOW >></button>
+        <div id="li"></div>
+        <p id="flat">FLATS ARE BACK</p>
+        <p id="step">Step out in the chicest</p>
+        <p id="new">new shoes</p>
+        <img width="100%" height="310px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_ActboxSmall_2x_1_20220221091602.jpg?imwidth=600&imdensity=1">
+        <button id="shopNow4">SHOP NOW >></button>
+    </div>
+</div>
+
+<div class="l"></div>
 
 
+<div id="ibag">
+    <div id="cbagEar">
+        <p>FORGET THE MINI BAG</p>
+        <P>This season is all about</P>
+        <p>trending totes</p>
+        <img width="100%" height="310px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_ActboxSmall_2x_2_20220221091601.jpg?imwidth=600&imdensity=1">
+        <button id="shopNow5">SHOP NOW >></button>
+        <div id="earLine"></div>
+        <p id="et1">FUTURE HEIRLOOMS</p>
+        <P id="et2">Jewelry you will treasure</P>
+        <p id="et3">forever</p>
+        <img width="100%" height="310px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_ActboxSmall_2x_3_20220221091600.jpg?imwidth=600&imdensity=1">
+        <button id="shopNow6">SHOP NOW >></button>
+    </div>
+    <div id="pinkBa">
+        <p>ICONS IN THE MAKING</p>
+        <P>New Ultimate Bags from</P>
+        <p>Valentino Garavani</p>
+        <img width="100%" height="930px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/UltimateBags_Vol6_Valentino_ActboxTall_x2_20220221125529.jpg?imwidth=600&imdensity=1">
+        <button id="shopNow7">SHOP NOW >></button>
+    </div>
+</div>
+
+<div class="l"></div>
+
+<p id="sue">SUEDE SPOTLIGHT</p>
+<p id="how">How to style the '70s-inspired jacket</p>
 
 
+<div id="inspired">
+    <div>
+        <img width="280px" height="280px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_FE_641x642_2x_1_20220221125802.jpg">
+        <p id="val">Valentino Garavani</p>
+    </div>
+    <div>
+        <img width="280px" height="280px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_FE_641x642_2x_2_20220221125759.jpg">
+        <p id="sai">Saint Laurent</p>
+    </div>
+    <div>
+        <img width="280px" height="280px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_FE_641x642_2x_3_20220221125758.jpg">
+        <p id="tom">Tom ford</p>
+    </div>
+    <div>
+        <img width="280px" height="280px" src="https://img.mytheresa.com/media/static/raw/cms/l/WW_HP_2022_CW08/CW08_FE_641x642_2x_4_20220221125802.jpg">
+        <p id="lo">Loewe</p>
+    </div>
+</div>
 
-
-
-    
-<!-- --------------------- footer start -------------------------  -->
+<button id="shopNow8">SHOP NOW >></button>
 
 <div class="insLine"></div>
 
@@ -1405,20 +1781,20 @@ body{
         <button id="fSign">SIGN UP</button>
         <div id="wishHeart">
          <p> Wish list </p>
-         <div class="heart sized"></div>
+         <div class="heart size"></div>
         </div>
         <p id="receive">Receive personal notifications</p>
         <p id="follow">Follow us on</p>
         <div id="socialM"> 
             <i class="fa-brands fa-linkedin fa-xl"></i>
-            <i class="fa-brands mli fa-facebook fa-xl"></i>
-            <i class="fa-brands mli fa-twitter fa-xl"></i>
-            <i class="fa-brands mli fa-pinterest fa-xl"></i>
-            <i class="fa-brands mli fa-instagram fa-xl"></i> 
-            <i class="fa-brands mli fa-youtube fa-xl"></i>
+            <i class="fa-brands ml fa-facebook fa-xl"></i>
+            <i class="fa-brands ml fa-twitter fa-xl"></i>
+            <i class="fa-brands ml fa-pinterest fa-xl"></i>
+            <i class="fa-brands ml fa-instagram fa-xl"></i> 
+            <i class="fa-brands ml fa-youtube fa-xl"></i>
             <img id="iPhone" height="28px" width="33px" src="https://cdn.iconscout.com/icon/free/png-64/iphone-270-475101.png">
             <i class="fa-brands mlc fa-weixin fa-xl"></i>
-            <i class="fa-brands mli fa-weibo fa-xl"></i>     
+            <i class="fa-brands ml fa-weibo fa-xl"></i>     
         </div>
     </div>
 </div>
@@ -1448,7 +1824,7 @@ body{
     <div> imprint </div>
 </div>
 
-  </body>
+</body>
 </html>
 
 
@@ -1457,179 +1833,41 @@ body{
 
 
 
+
+
+
+
+
 <script>
-  document.getElementById("alAcc").addEventListener("mouseenter", change);
-
-  function change() {
-    document.getElementById("alAcc").style.color = "dodgerblue";
-    document.getElementById("alAcc").style.textDecoration = "underline";
-  }
-
-  document.getElementById("car").addEventListener("mouseenter", changec);
-
-  function changec() {
-    document.getElementById("car").style.color = "dodgerblue";
-    document.getElementById("car").style.textDecoration = "underline";
-  }
-
-  document.getElementById("alAcc").addEventListener("mouseleave", changeagain);
-
-  function changeagain() {
-    document.getElementById("alAcc").style.color = "black";
-    document.getElementById("alAcc").style.textDecoration = "none";
-  }
-
-  document.getElementById("car").addEventListener("mouseleave", changecagain);
-
-function changecagain() {
-  document.getElementById("car").style.color = "black";
-  document.getElementById("car").style.textDecoration = "none";
-}
-
-
-document.getElementById("alAcc").addEventListener("click", login);
-
-function login() {
-    window.location.href = "login.html";
-}
-
-document.getElementById("car").addEventListener("click", home);
-
-function home() {
-    window.location.href = "home.html";
-}
-
-
-
-
-document.querySelector("button").addEventListener("click",signUp);
-
-var userArrProject = JSON.parse(localStorage.getItem("userDataProject")) || [];
-
-function signUp() {
-
-var fname = document.getElementById("fname").value;
-var lname = document.getElementById("lname").value;
- var email = document.getElementById("email").value;
- var password = document.getElementById("pass").value;
  
- var userCredentials = {
-     fname:fname,
-     lname:lname,
-     email:email,
-     password:password
- }
+ document.getElementById("women").addEventListener("click",function() {
+ document.getElementById("men").style.backgroundColor="white";
+ document.getElementById("kids").style.backgroundColor="white";
+ document.getElementById("women").style.backgroundColor="#f2f2f2"; 
+ })
 
- userArrProject.push(userCredentials);
- localStorage.setItem("userDataProject",JSON.stringify(userArrProject));
+ document.getElementById("men").addEventListener("click",function() {
+ document.getElementById("women").style.backgroundColor="white";
+ document.getElementById("kids").style.backgroundColor="white";
+ document.getElementById("men").style.backgroundColor="#f2f2f2"; 
+ window.location.href = "men.html";
+ })
 
- window.location.href="login.html";
-}
+ document.getElementById("kids").addEventListener("click",function() {
+ document.getElementById("women").style.backgroundColor="white";
+ document.getElementById("men").style.backgroundColor="white";
+ document.getElementById("kids").style.backgroundColor="#f2f2f2"; 
+ window.location.href="kids.html";
+ })
+
+ 
+//  document.getElementById("acc").addEventListener("click",function() {
+//      window.location.href = "login.html";
+//  })
+
+
+
+
+
+
 </script>
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1{
-            text-align: center;
-            font-size: 40px;
-            text-decoration: underline;
-        }
-        #container{
-            height:500px;
-            width: 350px;
-            border: 1px solid gray;
-            margin: auto;
-        }
-        #heading{
-            font-family: sans-serif;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        .ml{
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        .size{
-            width: 86.5%;
-            height: 25px;
-            margin-top: 2px;
-            margin-bottom: 20px;
-        }
-        button{
-            background-color: #f3cf76;
-            border: 1px solid gray;
-            border-radius: 3px;
-            padding: 8px;
-            width: 310px;
-            margin-left: 20px;
-        }
-        #login{
-            display: flex;
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        #direct{
-            color: #1d95d9;
-            margin-left: 5px;
-        }
-      
-    </style>
-</head>
-<body>
-    <h1>SignUp Page</h1>
-    <div id="container">
-   <div id="heading" class="ml">Create account</div>
-   <label class="ml">Email</label>
-   <br>
-   <input id="email" type="email" class="ml size" >
-   <br>
-   <label class="ml">Mobile number</label>
-   <br>
-   <input id="mobile" type="number" class="ml size" >
-   <br>
-   <label class="ml">Password</label>
-   <br>
-   <input id="pass" type="password" class="ml size" >
-   <br>
-   <button>SignUp</button> 
-   <div id="login">
-   <p>Already have an account?</p>
-   <p id="direct">Login</p>
-</div>
-</div>
-</body>
-</html> -->
-
-<!-- <script>
-    document.querySelector("button").addEventListener("click",signUp);
-
-    document.getElementById("direct").addEventListener("click",signUp);
-    
-    var userArr = JSON.parse(localStorage.getItem("userData")) || [];
-
-    function signUp() {
-
-     var email = document.getElementById("email").value;
-     var mobile = document.getElementById("mobile").value;
-     var password = document.getElementById("pass").value;
-     
-     var userCredentials = {
-         EmailAddress:email,
-         mobileNo:mobile,
-         password:password
-     }
-
-     userArr.push(userCredentials);
-     localStorage.setItem("userData",JSON.stringify(userArr));
-
-     window.location.href="login.html";
-    }
-
-</script> -->

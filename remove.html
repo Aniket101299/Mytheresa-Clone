@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: flex;
+    }
+    #container p:nth-child(2) {
+        margin-left: 20px;
+    }
+    #container p:nth-child(3) {
+        margin-left: 20px;
+    }
+    #container p:nth-child(4) {
+        margin-left: 20px;
+    }
+
+</style>
+<body>
+    <div id="container">
+      
+    </div>
+</body>
+</html>
+
+
+<script>
+    let mainDiv = document.getElementById("container");
+    
+    let p1 = document.createElement("p");
+    p1.innerText = "ani";
+    p1.addEventListener("click",remove);
+
+    let p2 = document.createElement("p");
+    p2.innerText = "san";
+    p2.addEventListener("click",remove);
+ 
+
+    let p3 = document.createElement("p");
+    p3.innerText = "aai";
+    p3.addEventListener("click",remove);
+    
+
+    let p4 = document.createElement("p");
+    p4.innerText = "papa";
+    p4.addEventListener("click",remove);
+
+    function remove () {
+    p4.parentElement.removeChild(p2);
+    }
+
+    mainDiv.append(p1,p2,p3,p4);
+</script>
+

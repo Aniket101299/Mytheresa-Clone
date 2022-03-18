@@ -113,6 +113,7 @@
       margin-top: 50px;
     }
     #sbag{
+        cursor: pointer;
        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
        font-size: 13.5px;
        font-weight: 400;
@@ -124,6 +125,7 @@
         position: relative;
     }
     #bag{
+        cursor: pointer;
         height: 36px;
         width: 36px;
         margin-top: -40px;
@@ -391,8 +393,15 @@
     width: 900px;
     /* border: 1px solid red; */
 }
+#kidImgs div:nth-child(1) {
+    cursor: pointer;
+}
+#moncler{
+    cursor: pointer;
+}
 .gap{
     margin-left: 20px;
+    cursor: pointer;
 }
 
 
@@ -1271,7 +1280,7 @@ document.getElementById("women").addEventListener("click",function() {
  document.getElementById("men").style.backgroundColor="white";
  document.getElementById("kids").style.backgroundColor="white";
  document.getElementById("women").style.backgroundColor="#f2f2f2"; 
- window.location.href = "home.html";
+ window.location.href = "index.html";
  })
 
  document.getElementById("men").addEventListener("click",function() {
@@ -1290,5 +1299,16 @@ document.getElementById("women").addEventListener("click",function() {
 
  document.getElementById("moncler").addEventListener("click",function () {
     window.location.href="kidsProduct.html";  
- })
+ });
+
+
+ document.getElementById("sbag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+
+document.getElementById("bag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+
+
 </script>

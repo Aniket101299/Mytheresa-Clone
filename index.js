@@ -77,10 +77,27 @@ const kidsSchema = new mongoose.Schema(
 
 const Kid = mongoose.model("Kid", kidsSchema); // comment => comments
 
-// ------------------ TAG MODEL ----------------------------------------------------
-const tagSchema = new mongoose.Schema(
+// // ------------------ SINGLEITEM MODEL ----------------------------------------------------
+// const singleItemSchema = new mongoose.Schema(
+//   {
+//     name: { type: String, required: true, unique: true },
+//   },
+//   {
+//     versionKey: false, // removed __v
+//     timestamps: true, // createdAt, updatedAt
+//   }
+// );
+
+// const SingleItem = mongoose.model("Cart", singleItemSchema); // tag => tags
+
+
+// ------------------ CART MODEL ----------------------------------------------------
+const cartSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true, unique: true },
+    name: { type: String, required: true },
+    title: { type: String, required: true },
+    price: { type: Number, required: true },
+    size: { type: String, required: true },
   },
   {
     versionKey: false, // removed __v
@@ -88,7 +105,10 @@ const tagSchema = new mongoose.Schema(
   }
 );
 
-const Tag = mongoose.model("tag", tagSchema); // tag => tags
+const Cart = mongoose.model("Cart", cartSchema); // tag => tags
+
+
+
 
 //db.users.find()
 // User => db.users
@@ -463,7 +483,60 @@ app.delete("/kid/:id", async (req, res) => {
 
 
 
+// ----------------------------- Cart CRUD -----------------------------------
 
+
+app.get("/cart", async (req, res) => {
+  try {
+    let Carts = await Cart.find().lean().exec();    
+    return res.send(Carts);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+
+app.post("/cart", async (req, res) => {
+  try {
+    const Carts = await Cart.create(req.body);
+
+    return res.send(Carts);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+app.get("/cart/:id", async (req, res) => {
+  try {
+    const Carts = await Cart.findById(req.params.id).lean().exec();
+
+    return res.send(Carts);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+app.patch("/cart/:id", async (req, res) => {
+  try {
+    const Carts = await Cart.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+
+    return res.send(Carts);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
+
+app.delete("/cart/:id", async (req, res) => {
+  try {
+    const Carts = await Cart.findByIdAndDelete(req.params.id).lean().exec();
+
+    return res.send(Carts);
+  } catch (err) {
+    return res.status(500).send(err.message);
+  }
+});
 
 
 
@@ -555,7 +628,7 @@ app.delete("/kid/:id", async (req, res) => {
 //   }
 // });
 
-app.listen(2345, async function () {
+app.listen(process.env.PORT || 2345, async function () {
   try {
     await connect();
     console.log("listening on port 2345");

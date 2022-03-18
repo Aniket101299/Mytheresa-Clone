@@ -112,6 +112,7 @@
       margin-top: 50px;
     }
     #sbag{
+        cursor: pointer;
        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
        font-size: 13.5px;
        font-weight: 400;
@@ -123,6 +124,7 @@
         position: relative;
     }
     #bag{
+        cursor: pointer;
         height: 36px;
         width: 36px;
         margin-top: -40px;
@@ -1624,372 +1626,431 @@
 
 <script>
  
-    document.getElementById("women").addEventListener("click",function() {
-    document.getElementById("men").style.backgroundColor="white";
-    document.getElementById("kids").style.backgroundColor="white";
-    document.getElementById("women").style.backgroundColor="#f2f2f2"; 
-    })
-   
-    document.getElementById("men").addEventListener("click",function() {
-    document.getElementById("women").style.backgroundColor="white";
-    document.getElementById("kids").style.backgroundColor="white";
-    document.getElementById("men").style.backgroundColor="#f2f2f2"; 
-    window.location.href = "men.html";
-    })
-   
-    document.getElementById("kids").addEventListener("click",function() {
-    document.getElementById("women").style.backgroundColor="white";
-    document.getElementById("men").style.backgroundColor="white";
-    document.getElementById("kids").style.backgroundColor="#f2f2f2"; 
-    window.location.href="kids.html";
-    })
-   
-    
-
-
-   
-    
-async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
+ document.getElementById("women").addEventListener("click",function() {
+        document.getElementById("men").style.backgroundColor="white";
+        document.getElementById("kids").style.backgroundColor="white";
+        document.getElementById("women").style.backgroundColor="#f2f2f2"; 
+        })
        
-         data(res);
-    } catch (err) {
-        console.log(err.message);
+        document.getElementById("men").addEventListener("click",function() {
+        document.getElementById("women").style.backgroundColor="white";
+        document.getElementById("kids").style.backgroundColor="white";
+        document.getElementById("men").style.backgroundColor="#f2f2f2"; 
+        window.location.href = "men.html";
+        })
+       
+        document.getElementById("kids").addEventListener("click",function() {
+        document.getElementById("women").style.backgroundColor="white";
+        document.getElementById("men").style.backgroundColor="white";
+        document.getElementById("kids").style.backgroundColor="#f2f2f2"; 
+        window.location.href="kids.html";
+        })
+       
+        
+        document.getElementById("sbag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+
+document.getElementById("bag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+    
+       
+        
+    async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           
+             data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-
-
-let mainDiv = document.getElementById("container");
-
-function data(item) {
-
-item.forEach(function (product){
-let x;
-let y;
-// console.log(product);
-
-let div = document.createElement("div");
-div.setAttribute("id","item");
-
-let heartImg = document.createElement("div");
-heartImg.setAttribute("class","hsizeN");
-
-let heart = document.createElement("img");
-heart.src="https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png";
-heart.setAttribute("height","17px");
-heart.setAttribute("width","17px");
-
-heartImg.append(heart);
-
-
-heartImg.addEventListener("mouseover",darkHeart);
-
-
-function darkHeart(){
-    heart.src= "https://www.clipartkey.com/mpngs/m/34-347390_transparent-solid-clipart-grey-heart-icon-png.png";
-    heart.setAttribute("width","24px");
-}
-
-heartImg.addEventListener("mouseout",faintHeart);
-
-function faintHeart(){
-    heart.src= "https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png";
+    showF();
+    
+    
+    let mainDiv = document.getElementById("container");
+    
+    function data(item) {
+    
+    item.forEach(function (product){
+    let x;
+    let y;
+    // console.log(product);
+    
+    let div = document.createElement("div");
+    div.setAttribute("id","item");
+    
+    let heartImg = document.createElement("div");
+    heartImg.setAttribute("class","hsizeN");
+    
+    let heart = document.createElement("img");
+    heart.src="https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png";
+    heart.setAttribute("height","17px");
     heart.setAttribute("width","17px");
-}
-
-
-let imgDiv = document.createElement("div");
-imgDiv.setAttribute("id","imgDiv");
-
-let img = document.createElement("img");
-img.src = product.img;
-img.setAttribute("height","306px");
-img.setAttribute("width","264px");
-x = product.Hoverimg;
- y = product.img;
-
-imgDiv.append(img);
-
-
-imgDiv.addEventListener("mouseover",add);
-
-function add() {
-    imgDiv.style.cursor="pointer";
-    img.src = x;
-}
-
-imgDiv.addEventListener("mouseleave",remove);
-
-function remove() {
-    img.src = y;   
-}
-
-
-let name = document.createElement("p");
-name.innerText=product.brand;
-name.setAttribute("id","name");
-
-let title = document.createElement("p");
-title.innerText = product.title;
-title.setAttribute("id","title");
-
-let price = document.createElement("p");
-price.innerText = `€ ${product.price}`;
-price.setAttribute("id","price");
-
-
-img.addEventListener("click",function() {
-    let detail = [];
-    // let detail = product._id;
-    // detail.push(product._id);
-    let obj = {
-        name:product.brand,
-        title:product.title,
-        price:product.price,
-         img:product.img
-        };
-         detail.push(obj);
-    localStorage.setItem("MenOneItem",JSON.stringify(detail));
-    window.location.href="menDetail.html";
-});
-
-
-div.append(heartImg,imgDiv,name,title,price);
-
-mainDiv.appendChild(div);
-
-});
-}
-
-
-function s () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?size=s`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    heartImg.append(heart);
+    
+    
+    heartImg.addEventListener("mouseover",darkHeart);
+    
+    
+    function darkHeart(){
+        heart.src= "https://www.clipartkey.com/mpngs/m/34-347390_transparent-solid-clipart-grey-heart-icon-png.png";
+        heart.setAttribute("width","24px");
     }
-}
-showF();
-}
-
-function m () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?size=m`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    heartImg.addEventListener("mouseout",faintHeart);
+    
+    function faintHeart(){
+        heart.src= "https://cdn.iconscout.com/icon/free/png-64/heart-1143-453267.png";
+        heart.setAttribute("width","17px");
     }
-}
-showF();
-}
-
-function l () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?size=l`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    
+    let imgDiv = document.createElement("div");
+    imgDiv.setAttribute("id","imgDiv");
+    
+    let img = document.createElement("img");
+    img.src = product.img;
+    img.setAttribute("height","306px");
+    img.setAttribute("width","264px");
+    x = product.Hoverimg;
+     y = product.img;
+    
+    imgDiv.append(img);
+    
+    
+    imgDiv.addEventListener("mouseover",function() {
+        imgDiv.style.cursor="pointer";
+        img.src = x;
+    });
+    
+    // function add() {
+    //     imgDiv.style.cursor="pointer";
+    //     img.src = x;
+    // }
+    
+    imgDiv.addEventListener("mouseleave",function() {
+          img.src = y;
+    });
+    
+    // function remove() {
+    //     img.src = y; 
+    // }
+    
+    
+    let name = document.createElement("p");
+    name.innerText=product.brand;
+    name.setAttribute("id","name");
+    
+    let title = document.createElement("p");
+    title.innerText = product.title;
+    title.setAttribute("id","title");
+    
+    let price = document.createElement("p");
+    price.innerText = `€ ${product.price}`;
+    price.setAttribute("id","price");
+    
+    
+    img.addEventListener("click",function() {
+        let detail = [];
+        // let detail = product._id;
+        // detail.push(product._id);
+        const obj = {
+            id : product._id,
+            name:product.brand,
+            title:product.title,
+            price:product.price,
+             img:product.img
+            };
+    // let id = product._id;
+    // console.log(id);
+    // console.log(typeof id);
+    // async function oneData() {
+    //     try{
+    
+    //  let response = await fetch(`https://localhost:2345/viewmen/${id}`, {
+    //         method: 'POST',
+    //         body: JSON.stringify(obj),
+    //         headers: {
+    //             'Content-type': 'application/json; charset=UTF-8'
+    //         }
+    //     });
+    //     let res = await response.json();
+    //    alert(res);
+    //     } catch(err) {
+    //         console.log(err.message);
+    //     }
+    // }
+    
+    // oneData();
+    
+    // fetch(`http://localhost:2345/viewmen/${id}`, {
+    //         method: 'POST',
+    //         body: JSON.stringify(obj),
+    //         headers: {
+    //             'Content-type': 'application/json; charset=UTF-8'
+    //         }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         alert(data);
+    //     })
+        // .catch(err => console.log(err.message));
+    
+    
+    
+    
+    
+    
+    
+    
+    
+             detail.push(obj);
+        localStorage.setItem("MenOneItem",JSON.stringify(detail));
+        window.location.href="menDetail.html";
+    });
+    
+    
+    div.append(heartImg,imgDiv,name,title,price);
+    
+    mainDiv.appendChild(div);
+    
+    });
     }
-}
-showF();
-}
-
-function beige () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=beige`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    
+    function s () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?size=s`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-}
-
-function black () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=black`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    showF();
     }
-}
-showF();
-}
-
-function blue () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=blue`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    function m () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?size=m`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-}
-
-function brown () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=brown`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    showF();
     }
-}
-showF();
-}
-
-function green () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=green`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    function l () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?size=l`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-}
-
-function red () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=red`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    showF();
     }
-}
-showF();
-}
-
-function white () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=white`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    function beige () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=beige`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-}
-
-function yellow () {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/viewmen?color=yellow`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    showF();
     }
-}
-showF();
-}
-
-   
-function get () {
-var e = document.getElementById("select").value;
-// var strUser = e.options[e.selectedIndex];
-console.log(typeof e);  
-if(e === "high") {
-high();
-}
- if(e === "low") {
-low();
-}
-}
-
-
-
-function high() {
-    console.log("hi");
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/dec`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    
+    function black () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=black`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
-}
-showF();
-}
-
-function low() {
-    async function showF() {
-    try {
-        let url = `http://localhost:2345/asc`;
-        let response = await fetch(url);
-        let res = await response.json();
-        console.log(res);
-       document.getElementById("container").innerHTML="";
-        data(res);
-    } catch (err) {
-        console.log(err.message);
+    showF();
     }
-}
-showF();
-}
+    
+    function blue () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=blue`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function brown () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=brown`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function green () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=green`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function red () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=red`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function white () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=white`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function yellow () {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/viewmen?color=yellow`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+       
+    function get () {
+    var e = document.getElementById("select").value;
+    // var strUser = e.options[e.selectedIndex];
+    console.log(typeof e);  
+    if(e === "high") {
+    high();
+    }
+     if(e === "low") {
+    low();
+    }
+    }
+    
+    
+    
+    function high() {
+        console.log("hi");
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/dec`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    function low() {
+        async function showF() {
+        try {
+            let url = `http://localhost:2345/asc`;
+            let response = await fetch(url);
+            let res = await response.json();
+            console.log(res);
+           document.getElementById("container").innerHTML="";
+            data(res);
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+    showF();
+    }
+    
+    
+
 
 
    </script>

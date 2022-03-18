@@ -112,6 +112,7 @@
       margin-top: 50px;
     }
     #sbag{
+        cursor: pointer;
        font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
        font-size: 13.5px;
        font-weight: 400;
@@ -123,6 +124,7 @@
         position: relative;
     }
     #bag{
+        cursor: pointer;
         height: 36px;
         width: 36px;
         margin-top: -40px;
@@ -345,39 +347,102 @@
     font-size: 22px;
     font-weight: 400;
     letter-spacing:0.5px;
+    margin-top: 0px;
 }
 
 #detail p:nth-child(2){
-    font-family: "Roboto Mono", Menlo, "Courier New", monospace;
-    font-size: 14px;
+    font-family: Menlo, monospace;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing:0.8px;
     line-height:20px;
+    color: gray;
+    margin-top: -15px;
 }
 
 #detail p:nth-child(3){
     font-family:   "Roboto Mono", Menlo, "Courier New", monospace;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing:1.1px;
     line-height:19px;
-    color: red;
+    margin-top: -5px;
 }
 
-#vi{
-       font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
-       font-size: 12.2px;
+
+  #selectSize{
+    font-family: Menlo, monospace;
+    font-size: 15.6px;
+    line-height: normal;
+    letter-spacing:0.0933333px;
+    padding: 6.5px 80px 6.5px 5px;
+    border: 1px solid gainsboro;
+    color: #604b31;
+  }
+  #selectSize>option{
+      margin-top: 50px;
+  }
+  #selectSize>option:nth-child(2){
+    color: gray;
+  }
+  #selectSize>option:nth-child(3){
+    color: gray;
+  }
+  #selectSize>option:nth-child(4){
+    color: gray;
+  }
+  #selectSize>option:nth-child(5){
+    color: gray;
+  }
+  #selectSize>option:nth-child(6){
+    color: gray;
+  }
+  #selectSize>option:nth-child(7){
+    color: gray;
+  }
+  #shoppingBag{
+      background-color: black;
+      color: white;
+      font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12px;
        font-weight: 400;
-       line-height:22px;
+       line-height:17px;
+       letter-spacing: 1.2px;
        text-align: center; 
-       background-color: black;
-       color: white;
-       margin-left: 780px;
-       width: 200px;
-       padding: 4.3px 5px 4.3px 5px;
-       border: none;
-       margin-top: -790px;
+       padding: 7px 42.5px 7px 42.5px;
        cursor: pointer;
+       margin-top: 15px;
+       border: none;
+  }
+  #shoppingBag:hover{
+      opacity: 0.7;
+  }
+  #addWish{
+      background-color: #f2f2f2;
+      font-family: Futura, "Century Gothic", "Gill Sans", Helvetica, Arial, sans-serif;
+       font-size: 12px;
+       font-weight: 400;
+       line-height:17px;
+       letter-spacing: 1.2px;
+       text-align: center; 
+       padding: 6px 80px 6px 51px;
+       border: none;
+       margin-top: 15px;
+       cursor: pointer;
+  }
+  #addWish:hover{
+      background-color: #e8e7e7;
+  }
+  #star{
+      color: gainsboro;
+      font-size: 17px;
+      margin-left: -73px;
+      margin-top: 225px;
+  }
+ 
+  #selbutt{
+margin-top: 40px;
+/* margin-left: -245px; */
   }
 
 
@@ -979,10 +1044,32 @@
     <div id="OneImg"></div>
     <div id="detail">
     </div>
-  
+    
+    <i class="fa-regular fa-star" id="star">
+    <!-- <div id="selbutt">
+        <select id="selectSize"> 
+            <option>Choose your size</option>
+            <option>_ 0 / XS</option>
+            <option>_ 1 / S</option>
+            <option>_ 2 / M</option>
+            <option>_ 3 / L</option>
+            <option>_ 4 / XL</option>
+            <option>_ 5 / XXL</option>
+        </select>
+
+        <br>
+
+    <button id="shoppingBag">ADD TO SHOPPING BAG</button>
+
+    <br>
+
+    <button id="addWish">ADD TO WISHLIST <i class="fa-regular fa-star" id="star"></i></button>
+
+    </div> -->
+   
 </div>
 
-<button id="vi">PROCEED TO CHECKOUT</button>
+
 
 
 
@@ -1241,7 +1328,9 @@
 
 <script>
     let getId =  JSON.parse(localStorage.getItem("MenOneItem"))
- 
+    let cartData = JSON.parse(localStorage.getItem("MytheresaCart")) || [];
+   
+
     console.log(getId[0]);
  let pic = document.getElementById("OneImg");
  let detail = document.getElementById("detail");
@@ -1263,7 +1352,109 @@
         let price = document.createElement("p");
         price.innerText = `€ ${getId[0].price}`;
 
-        detail.append(nm,title,price);
+        let selecButt = document.createElement("div");
+        selecButt.setAttribute("id","selbutt");
+
+        let select = document.createElement("select");
+        select.setAttribute("id","selectSize");
+        
+        let option1 = document.createElement("option");
+        option1.innerText="Choose your size";
+        let option2 = document.createElement("option");
+        option2.innerText="_ 0 / XS";
+        option2.setAttribute("value","xs");
+        let option3 = document.createElement("option");
+        option3.innerText="_ 1 / S";
+        option3.setAttribute("value","s");
+        let option4 = document.createElement("option");
+        option4.innerText="_ 2 / M";
+        option4.setAttribute("value","m");
+        let option5 = document.createElement("option");
+        option5.innerText="_ 3 / L";
+        option5.setAttribute("value","l");
+        let option6 = document.createElement("option");
+        option6.innerText="_ 4 / XL";
+        option6.setAttribute("value","xl");
+        let option7 = document.createElement("option");
+        option7.innerText="_ 5 / XXL";
+        option7.setAttribute("value","xxl");
+
+        select.append(option1,option2,option3,option4,option5,option6,option7);
+
+        select.onchange = "size()";
+ 
+       
+        function size () {
+    // var e = document.getElementById("select").value;
+    sizeValue = select.value;
+    // var strUser = e.options[e.selectedIndex];
+    // console.log(e);  
+    
+    // if(e == "xs") {
+ 
+    // localStorage.setItem("size","_ 0 / XS")
+    // }  else if (e == "s") {
+    //     localStorage.setItem("size","_ 1 / S")
+   
+    // } else if(e == "m") {
+    //     localStorage.setItem("size","_ 1 / S")
+
+    // } else if(e == "l") {
+    //     localStorage.setItem("size","_ 3 / L")
+    
+    // } else if(e == "xl") {
+    //     localStorage.setItem("size","_ 4 / XL")
+     
+    // } else if(e == "xxl") {
+    //     localStorage.setItem("size","_ 5 / XXL")
+    
+    // }
+   
+    }
+
+
+
+        let br1 = document.createElement("br");
+
+        let button1 = document.createElement("button");
+        button1.setAttribute("id","shoppingBag");
+        button1.innerText="ADD TO SHOPPING BAG";
+
+        
+
+        let data = {
+          name:  getId[0].name,
+          title: getId[0].title,
+          price: getId[0].price,
+          img: getId[0].img,
+          id : getId[0].id,
+           }
+
+    
+        button1.addEventListener("click",function() {
+       
+            for (var i = 0; i < cartData.length; i++) {
+        if (cartData[i].name == item.name) {
+          return alert("Product is already in the cart");
+        }
+      }
+      cartData.push(data);
+      localStorage.setItem("MytheresaCart", JSON.stringify(cartData));
+        
+
+         });
+        
+        let br2 = document.createElement("br");
+
+        let button2 = document.createElement("button");
+        button2.setAttribute("id","addWish");
+        button2.innerText=`ADD TO WISHLIST`;
+
+       
+        selecButt.append(select,br1,button1,br2,button2);
+
+
+        detail.append(nm,title,price,selecButt);
 
     }
     item();
@@ -1286,7 +1477,28 @@
 
 
 
-document.getElementById("vi").addEventListener("click",function() {
-    window.location.href = "payment.html";
+// document.getElementById("vi").addEventListener("click",function() {
+//     window.location.href = "payment.html";
+// });
+
+
+document.getElementById("addWish").addEventListener("mouseover",function() {
+    document.getElementById("star").style.color="gray";
 })
+
+document.getElementById("addWish").addEventListener("mouseleave",function() {
+    document.getElementById("star").style.color="gainsboro";    
+})
+
+
+document.getElementById("sbag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+
+document.getElementById("bag").addEventListener("click",function() {
+    window.location.href = "cart.html";
+})
+
+
+
 </script>
